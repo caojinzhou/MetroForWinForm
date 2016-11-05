@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetroFramework", "MetroFramework\MetroFramework.csproj", "{BB41AC8B-CBED-4387-A7E0-4567EDB3F57F}"
 EndProject
@@ -20,8 +20,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetroFramework.Design", "MetroFramework.Design\MetroFramework.Design.csproj", "{7316584D-9A16-4280-A8AB-6D45198C6E4D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetroFramework.Fonts", "MetroFramework.Fonts\MetroFramework.Fonts.csproj", "{5A2FCAE8-C2FA-41BD-90EA-16103EA07B26}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "map", "map", "{9331EBDE-0A24-47DD-8BD3-024CA2E94288}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

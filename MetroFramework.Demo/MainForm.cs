@@ -14,65 +14,19 @@ namespace MetroFramework.Demo
 {
     public partial class MainForm : MetroForm
     {
-
+        MapGeneration map1 = new MapGeneration();
 
         public MainForm()
         {
             InitializeComponent();
-            
             metroStyleManager.Theme = MetroThemeStyle.Default;
             metroStyleManager.Style = MetroColorStyle.Teal;
-            mapBox2.Refresh();            
-            SharpMap.Layers.VectorLayer vlay = new SharpMap.Layers.VectorLayer("States");
-            vlay.DataSource = new SharpMap.Data.Providers.ShapeFile(@"../../../map/SZ_DISTR/SZ_DISTR.shp", true);
+            map1.AddMapbox(mapBox1);
+//            map1.AddLayer();
 
-            SharpMap.Layers.VectorLayer vlay1 = new SharpMap.Layers.VectorLayer("States");
-            vlay1.DataSource = new SharpMap.Data.Providers.ShapeFile(@"../../../map/roadway/城市次干道.shp", true);
-
-            SharpMap.Layers.VectorLayer vlay2 = new SharpMap.Layers.VectorLayer("States");
-            vlay1.DataSource = new SharpMap.Data.Providers.ShapeFile(@"../../../map/roadway/高速.shp", true);
-
-            //构造土地样式
-            VectorStyle style1 = new VectorStyle();
-            style1.Fill = new SolidBrush(Color.FromArgb(232, 232, 232));
-
-            VectorStyle style2 = new VectorStyle();
-            style2.Fill = new SolidBrush(Color.FromArgb(255, 128, 0));
-
-            VectorStyle style3 = new VectorStyle();
-            style3.Fill = new SolidBrush(Color.FromArgb(204, 89, 68));
-
-            VectorStyle style4 = new VectorStyle();
-            style4.Fill = new SolidBrush(Color.FromArgb(86, 58, 255));
-
-
-            //创建地图
-            Dictionary<string, SharpMap.Styles.IStyle> styles = new Dictionary<string, IStyle>();
-            styles.Add("罗湖区", style1);
-            styles.Add("福田区", style2);
-            styles.Add("盐田区", style3);
-            styles.Add("龙岗区", style4);
-            styles.Add("宝安区", style4);
-            styles.Add("坪山新区", style2);
-            styles.Add("南山区", style4);
-
-            //分配主题
-            vlay.Theme = new SharpMap.Rendering.Thematics.UniqueValuesTheme<string>("DISTRICT", styles, style1);
-            mapBox2.Map.Layers.Add(vlay);
-            
-            mapBox2.Map.ZoomToExtents();
-            mapBox2.Refresh();
-            mapBox2.ActiveTool = SharpMap.Forms.MapBox.Tools.Pan;
-            basemap1.Checked = true;
+           
 
         }
-
-        private void guijiscmap()
-        {
-
-
-        }
-
 
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -217,21 +171,6 @@ namespace MetroFramework.Demo
         private void button22_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void basemap1_CheckedChanged(object sender, EventArgs e)
-        {
-            
         }
         //private void updateprogress() //labei3显示进度百分比
         //{

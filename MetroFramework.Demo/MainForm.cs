@@ -15,15 +15,14 @@ namespace MetroFramework.Demo
     public partial class MainForm : MetroForm
     {
 
+
         public MainForm()
         {
             InitializeComponent();
+            
             metroStyleManager.Theme = MetroThemeStyle.Default;
             metroStyleManager.Style = MetroColorStyle.Teal;
-
-
-            mapBox1.Refresh();
-
+            mapBox2.Refresh();            
             SharpMap.Layers.VectorLayer vlay = new SharpMap.Layers.VectorLayer("States");
             vlay.DataSource = new SharpMap.Data.Providers.ShapeFile(@"../../../map/SZ_DISTR/SZ_DISTR.shp", true);
 
@@ -47,31 +46,6 @@ namespace MetroFramework.Demo
             style4.Fill = new SolidBrush(Color.FromArgb(86, 58, 255));
 
 
-            ////
-            //VectorStyle style1 = new VectorStyle();
-            //style1.Fill = new SolidBrush(Color.FromArgb(204, 89, 68));
-            //style1.EnableOutline = true;
-            //style1.Outline = new Pen(Brushes.Black, 1.2f);
-            //VectorStyle style2 = new VectorStyle();
-            //style2.Fill = new SolidBrush(Color.FromArgb(253, 174, 97));
-            //style2.EnableOutline = true;
-            //style2.Outline = new Pen(Brushes.Black, 1.2f);
-            //VectorStyle style3 = new VectorStyle();
-            //style3.Fill = new SolidBrush(Color.FromArgb(255, 255, 192));
-            //style3.EnableOutline = true;
-            //style3.Outline = new Pen(Brushes.Black, 1.2f);
-            //VectorStyle style4 = new VectorStyle();
-            //style4.Fill = new SolidBrush(Color.FromArgb(166, 217, 106));
-            //style4.EnableOutline = true;
-            //style4.Outline = new Pen(Brushes.Black, 1.2f);
-            //Dictionary<string, SharpMap.Styles.IStyle> styles = new Dictionary<string, IStyle>();
-            //styles.Add("1", style1);
-            //styles.Add("2", style2);
-            //styles.Add("3", style3);
-            //styles.Add("4", style4);
-            //vlay.Theme = new SharpMap.Rendering.Thematics.UniqueValuesTheme<string>("id", styles, style1);
-            /////
-
             //创建地图
             Dictionary<string, SharpMap.Styles.IStyle> styles = new Dictionary<string, IStyle>();
             styles.Add("罗湖区", style1);
@@ -84,15 +58,21 @@ namespace MetroFramework.Demo
 
             //分配主题
             vlay.Theme = new SharpMap.Rendering.Thematics.UniqueValuesTheme<string>("DISTRICT", styles, style1);
-            //mapBox1.Map.Layers.Add(vlay2);
-            mapBox1.Map.Layers.Add(vlay);
-           // mapBox1.Map.Layers.Add(vlay1);
-
-            mapBox1.Map.ZoomToExtents();
-            mapBox1.Refresh();
-            mapBox1.ActiveTool = SharpMap.Forms.MapBox.Tools.Pan;
+            mapBox2.Map.Layers.Add(vlay);
+            
+            mapBox2.Map.ZoomToExtents();
+            mapBox2.Refresh();
+            mapBox2.ActiveTool = SharpMap.Forms.MapBox.Tools.Pan;
+            basemap1.Checked = true;
 
         }
+
+        private void guijiscmap()
+        {
+
+
+        }
+
 
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -237,6 +217,21 @@ namespace MetroFramework.Demo
         private void button22_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void basemap1_CheckedChanged(object sender, EventArgs e)
+        {
+            
         }
         //private void updateprogress() //labei3显示进度百分比
         //{

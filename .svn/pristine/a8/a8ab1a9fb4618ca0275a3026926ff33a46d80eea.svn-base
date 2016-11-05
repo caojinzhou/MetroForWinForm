@@ -1,0 +1,181 @@
+﻿namespace MetroFramework.Demo
+{
+    partial class TestForm1
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Vom Windows Form-Designer generierter Code
+
+        /// <summary>
+        /// Erforderliche Methode für die Designerunterstützung.
+        /// Der Inhalt der Methode darf nicht mit dem Code-Editor geändert werden.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
+            this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
+            this.metroButton3 = new MetroFramework.Controls.MetroButton();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.metroButton4 = new MetroFramework.Controls.MetroButton();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.metroTrackBar1 = new MetroFramework.Controls.MetroTrackBar();
+            this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
+            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.propertyGrid1 = new System.Windows.Forms.PropertyGrid();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.metroStyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
+            this.metroTabControl1.SuspendLayout();
+            this.metroTabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // metroTabControl1
+            // 
+            this.metroTabControl1.Controls.Add(this.metroTabPage1);
+            this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroTabControl1.Location = new System.Drawing.Point(20, 60);
+            this.metroTabControl1.Name = "metroTabControl1";
+            this.metroTabControl1.Padding = new System.Drawing.Point(6, 8);
+            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.Size = new System.Drawing.Size(600, 271);
+            this.metroTabControl1.TabIndex = 0;
+            this.metroTabControl1.UseSelectable = true;
+            // 
+            // metroTabPage1
+            // 
+            this.metroTabPage1.AutoScroll = true;
+            this.metroTabPage1.Controls.Add(this.metroButton3);
+            this.metroTabPage1.Controls.Add(this.metroButton2);
+            this.metroTabPage1.Controls.Add(this.metroButton4);
+            this.metroTabPage1.Controls.Add(this.metroButton1);
+            this.metroTabPage1.Enabled = true;
+            this.metroTabPage1.HorizontalScrollbar = true;
+            this.metroTabPage1.HorizontalScrollbarBarColor = true;
+            this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage1.HorizontalScrollbarSize = 9;
+            this.metroTabPage1.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage1.Name = "metroTabPage1";
+            this.metroTabPage1.Padding = new System.Windows.Forms.Padding(25, 23, 25, 23);
+            this.metroTabPage1.Size = new System.Drawing.Size(592, 229);
+            this.metroTabPage1.TabIndex = 0;
+            this.metroTabPage1.Text = "Tiles && Buttons";
+            this.metroTabPage1.VerticalScrollbar = true;
+            this.metroTabPage1.VerticalScrollbarBarColor = true;
+            this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage1.VerticalScrollbarSize = 10;
+            this.metroTabPage1.Visible = true;
+            // 
+            // metroButton3
+            // 
+            this.metroButton3.Enabled = false;
+            this.metroButton3.Location = new System.Drawing.Point(244, 123);
+            this.metroButton3.Name = "metroButton3";
+            this.metroButton3.Size = new System.Drawing.Size(127, 34);
+            this.metroButton3.TabIndex = 7;
+            this.metroButton3.Text = "Disabled Button";
+            this.metroButton3.UseSelectable = true;
+            // 
+            // metroButton2
+            // 
+            this.metroButton2.Highlight = true;
+            this.metroButton2.Location = new System.Drawing.Point(244, 83);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(127, 34);
+            this.metroButton2.TabIndex = 6;
+            this.metroButton2.Text = "Highlighted Button";
+            this.metroButton2.UseSelectable = true;
+            // 
+            // metroButton4
+            // 
+            this.metroButton4.Location = new System.Drawing.Point(270, 180);
+            this.metroButton4.Name = "metroButton4";
+            this.metroButton4.TabIndex = 0;
+            this.metroButton4.Text = "Highlighted Button";
+            this.metroButton4.UseSelectable = true;
+            // 
+            // metroButton1
+            // 
+            this.metroButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.metroButton1.Location = new System.Drawing.Point(244, 43);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(127, 34);
+            this.metroButton1.TabIndex = 5;
+            this.metroButton1.Text = "Normal Button";
+            this.metroButton1.UseSelectable = true;
+            // 
+            // metroTabPage3
+            // 
+            this.metroTrackBar1.Location = new System.Drawing.Point(28, 135);
+            this.metroTrackBar1.Name = "metroTrackBar1";
+            this.metroTrackBar1.Size = new System.Drawing.Size(237, 21);
+            this.metroTrackBar1.TabIndex = 4;
+            this.metroTrackBar1.Text = "metroTrackBar1";
+     
+        
+            // 
+            // metroStyleManager
+            // 
+            this.metroStyleManager.Owner = this;
+            this.metroStyleManager.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // TestForm1
+            // 
+            this.ApplyImageInvert = true;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackImage = global::MetroFramework.Demo.Properties.Resources.GitHub_Mark;
+            this.BackImagePadding = new System.Windows.Forms.Padding(210, 10, 0, 0);
+            this.BackMaxSize = 50;
+            this.ClientSize = new System.Drawing.Size(640, 349);
+            this.Controls.Add(this.metroTabControl1);
+            this.Name = "TestForm1";
+            this.Padding = new System.Windows.Forms.Padding(20, 60, 20, 18);
+            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;
+            this.StyleManager = this.metroStyleManager;
+            this.Text = "metro framework";
+            this.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroTabControl1.ResumeLayout(false);
+            this.metroTabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private Controls.MetroTabControl metroTabControl1;
+        private Components.MetroStyleManager metroStyleManager;
+        private Controls.MetroTabPage metroTabPage1;
+        private Controls.MetroButton metroButton3;
+        private Controls.MetroButton metroButton2;
+        private Controls.MetroButton metroButton1;
+        private Controls.MetroTrackBar metroTrackBar1;
+        private Controls.MetroComboBox metroComboBox1;
+        private Controls.MetroComboBox metroComboBox2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PropertyGrid propertyGrid1;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private Controls.MetroButton metroButton4;
+
+    }
+}

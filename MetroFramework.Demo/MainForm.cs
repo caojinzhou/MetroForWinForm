@@ -25,13 +25,13 @@ namespace MetroFramework.Demo
             mapBox1.Refresh();
 
             SharpMap.Layers.VectorLayer vlay = new SharpMap.Layers.VectorLayer("States");
-            vlay.DataSource = new SharpMap.Data.Providers.ShapeFile("D:\\SZ_DISTR\\SZ_DISTR.shp", true);
+            vlay.DataSource = new SharpMap.Data.Providers.ShapeFile(@"../../../map/SZ_DISTR/SZ_DISTR.shp", true);
 
             SharpMap.Layers.VectorLayer vlay1 = new SharpMap.Layers.VectorLayer("States");
-            vlay1.DataSource = new SharpMap.Data.Providers.ShapeFile("C:\\Users\\Tianh\\Desktop\\项目10-8-？\\地图文件\\roadway\\城市次干道.shp", true);
+            vlay1.DataSource = new SharpMap.Data.Providers.ShapeFile(@"../../../map/roadway/城市次干道.shp", true);
 
             SharpMap.Layers.VectorLayer vlay2 = new SharpMap.Layers.VectorLayer("States");
-            vlay1.DataSource = new SharpMap.Data.Providers.ShapeFile("C:\\Users\\Tianh\\Desktop\\项目10-8-？\\地图文件\\roadway\\高速.shp", true);
+            vlay1.DataSource = new SharpMap.Data.Providers.ShapeFile(@"../../../map/roadway/高速.shp", true);
 
             //构造土地样式
             VectorStyle style1 = new VectorStyle();
@@ -86,7 +86,7 @@ namespace MetroFramework.Demo
             vlay.Theme = new SharpMap.Rendering.Thematics.UniqueValuesTheme<string>("DISTRICT", styles, style1);
             //mapBox1.Map.Layers.Add(vlay2);
             mapBox1.Map.Layers.Add(vlay);
-            mapBox1.Map.Layers.Add(vlay1);
+           // mapBox1.Map.Layers.Add(vlay1);
 
             mapBox1.Map.ZoomToExtents();
             mapBox1.Refresh();

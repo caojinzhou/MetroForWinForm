@@ -34,47 +34,61 @@ namespace MetroFramework.Demo
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
-            this.metroTabPage0 = new MetroFramework.Controls.MetroTabPage();
+            this.traTabPage = new MetroFramework.Controls.MetroTabPage();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.mapBoxTra = new SharpMap.Forms.MapBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.metroLabel18 = new MetroFramework.Controls.MetroLabel();
             this.metroProgressBar1 = new MetroFramework.Controls.MetroProgressBar();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.basemap1 = new MetroFramework.Controls.MetroCheckBox();
+            this.button27 = new System.Windows.Forms.Button();
+            this.metroCheckBox17 = new MetroFramework.Controls.MetroCheckBox();
+            this.metroCheckBox16 = new MetroFramework.Controls.MetroCheckBox();
+            this.basemapcheckbox = new MetroFramework.Controls.MetroCheckBox();
             this.metroCheckBox6 = new MetroFramework.Controls.MetroCheckBox();
             this.metroCheckBox5 = new MetroFramework.Controls.MetroCheckBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.tranext = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
-            this.groupBox14 = new System.Windows.Forms.GroupBox();
-            this.metroCheckBox9 = new MetroFramework.Controls.MetroCheckBox();
+            this.trapatext2 = new System.Windows.Forms.TextBox();
+            this.trapala2 = new System.Windows.Forms.Label();
+            this.trapatext1 = new System.Windows.Forms.TextBox();
+            this.trapalb1 = new System.Windows.Forms.Label();
+            this.trainputbt = new System.Windows.Forms.Button();
+            this.traoutputbt = new System.Windows.Forms.Button();
+            this.trainputtext = new System.Windows.Forms.TextBox();
+            this.traoutputtext = new System.Windows.Forms.TextBox();
+            this.tracancel = new System.Windows.Forms.Button();
+            this.stopptTabPage = new MetroFramework.Controls.MetroTabPage();
+            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.mapboxstoppt = new SharpMap.Forms.MapBox();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.metroCheckBox7 = new MetroFramework.Controls.MetroCheckBox();
             this.metroCheckBox8 = new MetroFramework.Controls.MetroCheckBox();
+            this.metroCheckBox9 = new MetroFramework.Controls.MetroCheckBox();
+            this.metroCheckBox19 = new MetroFramework.Controls.MetroCheckBox();
+            this.metroCheckBox20 = new MetroFramework.Controls.MetroCheckBox();
+            this.metroCheckBox21 = new MetroFramework.Controls.MetroCheckBox();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.metroProgressBar2 = new MetroFramework.Controls.MetroProgressBar();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.button7 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.stopptCancel = new System.Windows.Forms.Button();
+            this.stopptNext = new System.Windows.Forms.Button();
+            this.stopptBack = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
+            this.button5 = new System.Windows.Forms.Button();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button17 = new System.Windows.Forms.Button();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.actTabPage = new MetroFramework.Controls.MetroTabPage();
             this.groupBox16 = new System.Windows.Forms.GroupBox();
             this.metroProgressBar3 = new MetroFramework.Controls.MetroProgressBar();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
@@ -86,15 +100,15 @@ namespace MetroFramework.Demo
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.button11 = new System.Windows.Forms.Button();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.button11 = new System.Windows.Forms.Button();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.travelTabPage = new MetroFramework.Controls.MetroTabPage();
             this.groupBox18 = new System.Windows.Forms.GroupBox();
             this.metroProgressBar4 = new MetroFramework.Controls.MetroProgressBar();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
@@ -113,7 +127,7 @@ namespace MetroFramework.Demo
             this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
-            this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
+            this.batchTabPage = new MetroFramework.Controls.MetroTabPage();
             this.groupBox20 = new System.Windows.Forms.GroupBox();
             this.metroCheckBox15 = new MetroFramework.Controls.MetroCheckBox();
             this.metroCheckBox14 = new MetroFramework.Controls.MetroCheckBox();
@@ -144,44 +158,56 @@ namespace MetroFramework.Demo
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.metroProgressBar6 = new MetroFramework.Controls.MetroProgressBar();
+            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.button26 = new System.Windows.Forms.Button();
+            this.button25 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.button23 = new System.Windows.Forms.Button();
+            this.metroCheckBox27 = new MetroFramework.Controls.MetroCheckBox();
+            this.metroCheckBox26 = new MetroFramework.Controls.MetroCheckBox();
+            this.metroCheckBox25 = new MetroFramework.Controls.MetroCheckBox();
+            this.metroCheckBox24 = new MetroFramework.Controls.MetroCheckBox();
+            this.metroCheckBox23 = new MetroFramework.Controls.MetroCheckBox();
+            this.metroCheckBox22 = new MetroFramework.Controls.MetroCheckBox();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.mapBox2 = new SharpMap.Forms.MapBox();
-            this.metroCheckBox16 = new MetroFramework.Controls.MetroCheckBox();
-            this.metroCheckBox17 = new MetroFramework.Controls.MetroCheckBox();
-            this.metroCheckBox18 = new MetroFramework.Controls.MetroCheckBox();
             this.metroTabControl1.SuspendLayout();
-            this.metroTabPage0.SuspendLayout();
+            this.traTabPage.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.groupBox12.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.metroTabPage1.SuspendLayout();
-            this.groupBox14.SuspendLayout();
+            this.stopptTabPage.SuspendLayout();
+            this.tabControl2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.groupBox13.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.metroTabPage2.SuspendLayout();
+            this.actTabPage.SuspendLayout();
             this.groupBox16.SuspendLayout();
             this.groupBox15.SuspendLayout();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.groupBox5.SuspendLayout();
-            this.metroTabPage3.SuspendLayout();
+            this.travelTabPage.SuspendLayout();
             this.groupBox18.SuspendLayout();
             this.groupBox17.SuspendLayout();
             this.groupBox8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.groupBox7.SuspendLayout();
-            this.metroTabPage4.SuspendLayout();
+            this.batchTabPage.SuspendLayout();
             this.groupBox20.SuspendLayout();
             this.groupBox19.SuspendLayout();
             this.groupBox9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager)).BeginInit();
             this.metroContextMenu1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // metroTabControl1
@@ -189,48 +215,97 @@ namespace MetroFramework.Demo
             this.metroTabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroTabControl1.Controls.Add(this.metroTabPage0);
-            this.metroTabControl1.Controls.Add(this.metroTabPage1);
-            this.metroTabControl1.Controls.Add(this.metroTabPage2);
-            this.metroTabControl1.Controls.Add(this.metroTabPage3);
-            this.metroTabControl1.Controls.Add(this.metroTabPage4);
+            this.metroTabControl1.Controls.Add(this.traTabPage);
+            this.metroTabControl1.Controls.Add(this.stopptTabPage);
+            this.metroTabControl1.Controls.Add(this.actTabPage);
+            this.metroTabControl1.Controls.Add(this.travelTabPage);
+            this.metroTabControl1.Controls.Add(this.batchTabPage);
             this.metroTabControl1.Location = new System.Drawing.Point(21, 46);
             this.metroTabControl1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.metroTabControl1.Multiline = true;
             this.metroTabControl1.Name = "metroTabControl1";
             this.metroTabControl1.SelectedIndex = 0;
-            this.metroTabControl1.Size = new System.Drawing.Size(810, 648);
+            this.metroTabControl1.Size = new System.Drawing.Size(948, 648);
             this.metroTabControl1.TabIndex = 0;
             this.metroTabControl1.UseSelectable = true;
             // 
-            // metroTabPage0
+            // traTabPage
             // 
-            this.metroTabPage0.Controls.Add(this.tabControl1);
-            this.metroTabPage0.Controls.Add(this.groupBox12);
-            this.metroTabPage0.Controls.Add(this.groupBox11);
-            this.metroTabPage0.Controls.Add(this.button4);
-            this.metroTabPage0.Controls.Add(this.groupBox3);
-            this.metroTabPage0.Controls.Add(this.button6);
-            this.metroTabPage0.HorizontalScrollbarBarColor = true;
-            this.metroTabPage0.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage0.HorizontalScrollbarSize = 10;
-            this.metroTabPage0.Location = new System.Drawing.Point(4, 39);
-            this.metroTabPage0.Name = "metroTabPage0";
-            this.metroTabPage0.Size = new System.Drawing.Size(802, 605);
-            this.metroTabPage0.TabIndex = 6;
-            this.metroTabPage0.Text = "轨迹生成";
-            this.metroTabPage0.VerticalScrollbarBarColor = true;
-            this.metroTabPage0.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage0.VerticalScrollbarSize = 10;
+            this.traTabPage.Controls.Add(this.tabControl1);
+            this.traTabPage.Controls.Add(this.groupBox12);
+            this.traTabPage.Controls.Add(this.groupBox11);
+            this.traTabPage.Controls.Add(this.tranext);
+            this.traTabPage.Controls.Add(this.groupBox3);
+            this.traTabPage.Controls.Add(this.tracancel);
+            this.traTabPage.HorizontalScrollbarBarColor = true;
+            this.traTabPage.HorizontalScrollbarHighlightOnWheel = false;
+            this.traTabPage.HorizontalScrollbarSize = 10;
+            this.traTabPage.Location = new System.Drawing.Point(4, 39);
+            this.traTabPage.Name = "traTabPage";
+            this.traTabPage.Size = new System.Drawing.Size(940, 605);
+            this.traTabPage.TabIndex = 6;
+            this.traTabPage.Text = "轨迹生成";
+            this.traTabPage.VerticalScrollbarBarColor = true;
+            this.traTabPage.VerticalScrollbarHighlightOnWheel = false;
+            this.traTabPage.VerticalScrollbarSize = 10;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(175, 7);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(756, 503);
+            this.tabControl1.TabIndex = 28;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.mapBoxTra);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(748, 477);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "地图";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // mapBoxTra
+            // 
+            this.mapBoxTra.ActiveTool = SharpMap.Forms.MapBox.Tools.None;
+            this.mapBoxTra.Cursor = System.Windows.Forms.Cursors.Default;
+            this.mapBoxTra.FineZoomFactor = 10D;
+            this.mapBoxTra.Location = new System.Drawing.Point(4, 2);
+            this.mapBoxTra.MapQueryMode = SharpMap.Forms.MapBox.MapQueryType.LayerByIndex;
+            this.mapBoxTra.Name = "mapBoxTra";
+            this.mapBoxTra.QueryGrowFactor = 5F;
+            this.mapBoxTra.QueryLayerIndex = 0;
+            this.mapBoxTra.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
+            this.mapBoxTra.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
+            this.mapBoxTra.ShowProgressUpdate = false;
+            this.mapBoxTra.Size = new System.Drawing.Size(742, 473);
+            this.mapBoxTra.TabIndex = 0;
+            this.mapBoxTra.Text = "mapBox2";
+            this.mapBoxTra.WheelZoomMagnitude = -2D;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(748, 477);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "统计图";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // groupBox12
             // 
             this.groupBox12.BackColor = System.Drawing.SystemColors.Window;
             this.groupBox12.Controls.Add(this.metroLabel18);
             this.groupBox12.Controls.Add(this.metroProgressBar1);
-            this.groupBox12.Location = new System.Drawing.Point(0, 528);
+            this.groupBox12.Location = new System.Drawing.Point(0, 526);
             this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(802, 45);
+            this.groupBox12.Size = new System.Drawing.Size(937, 45);
             this.groupBox12.TabIndex = 27;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "进度";
@@ -238,7 +313,7 @@ namespace MetroFramework.Demo
             // metroLabel18
             // 
             this.metroLabel18.AutoSize = true;
-            this.metroLabel18.Location = new System.Drawing.Point(706, 18);
+            this.metroLabel18.Location = new System.Drawing.Point(852, 17);
             this.metroLabel18.Name = "metroLabel18";
             this.metroLabel18.Size = new System.Drawing.Size(79, 20);
             this.metroLabel18.TabIndex = 35;
@@ -248,85 +323,117 @@ namespace MetroFramework.Demo
             // 
             this.metroProgressBar1.Location = new System.Drawing.Point(9, 17);
             this.metroProgressBar1.Name = "metroProgressBar1";
-            this.metroProgressBar1.Size = new System.Drawing.Size(686, 23);
+            this.metroProgressBar1.Size = new System.Drawing.Size(837, 23);
             this.metroProgressBar1.TabIndex = 34;
             this.metroProgressBar1.Value = 20;
             // 
             // groupBox11
             // 
             this.groupBox11.BackColor = System.Drawing.SystemColors.Window;
-            this.groupBox11.Controls.Add(this.metroCheckBox18);
+            this.groupBox11.Controls.Add(this.button27);
             this.groupBox11.Controls.Add(this.metroCheckBox17);
             this.groupBox11.Controls.Add(this.metroCheckBox16);
-            this.groupBox11.Controls.Add(this.basemap1);
+            this.groupBox11.Controls.Add(this.basemapcheckbox);
             this.groupBox11.Controls.Add(this.metroCheckBox6);
             this.groupBox11.Controls.Add(this.metroCheckBox5);
             this.groupBox11.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox11.Location = new System.Drawing.Point(0, 70);
+            this.groupBox11.Location = new System.Drawing.Point(0, 240);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(97, 453);
+            this.groupBox11.Size = new System.Drawing.Size(166, 270);
             this.groupBox11.TabIndex = 26;
             this.groupBox11.TabStop = false;
-            this.groupBox11.Text = "可视化参数";
+            this.groupBox11.Text = "图层操作";
             // 
-            // basemap1
+            // button27
             // 
-            this.basemap1.AutoSize = true;
-            this.basemap1.Location = new System.Drawing.Point(8, 36);
-            this.basemap1.Name = "basemap1";
-            this.basemap1.Size = new System.Drawing.Size(48, 17);
-            this.basemap1.TabIndex = 3;
-            this.basemap1.Text = "底图";
-            this.basemap1.UseSelectable = true;
-            this.basemap1.CheckedChanged += new System.EventHandler(this.basemap1_CheckedChanged);
+            this.button27.Location = new System.Drawing.Point(19, 227);
+            this.button27.Name = "button27";
+            this.button27.Size = new System.Drawing.Size(75, 23);
+            this.button27.TabIndex = 6;
+            this.button27.Text = "添加图层";
+            this.button27.UseVisualStyleBackColor = true;
+            this.button27.Click += new System.EventHandler(this.button27_Click);
+            // 
+            // metroCheckBox17
+            // 
+            this.metroCheckBox17.AutoSize = true;
+            this.metroCheckBox17.Location = new System.Drawing.Point(19, 191);
+            this.metroCheckBox17.Name = "metroCheckBox17";
+            this.metroCheckBox17.Size = new System.Drawing.Size(60, 17);
+            this.metroCheckBox17.TabIndex = 5;
+            this.metroCheckBox17.Text = "添加三";
+            this.metroCheckBox17.UseSelectable = true;
+            // 
+            // metroCheckBox16
+            // 
+            this.metroCheckBox16.AutoSize = true;
+            this.metroCheckBox16.Location = new System.Drawing.Point(19, 153);
+            this.metroCheckBox16.Name = "metroCheckBox16";
+            this.metroCheckBox16.Size = new System.Drawing.Size(60, 17);
+            this.metroCheckBox16.TabIndex = 4;
+            this.metroCheckBox16.Text = "添加二";
+            this.metroCheckBox16.UseSelectable = true;
+            this.metroCheckBox16.CheckedChanged += new System.EventHandler(this.metroCheckBox16_CheckedChanged);
+            // 
+            // basemapcheckbox
+            // 
+            this.basemapcheckbox.AutoSize = true;
+            this.basemapcheckbox.Location = new System.Drawing.Point(19, 36);
+            this.basemapcheckbox.Name = "basemapcheckbox";
+            this.basemapcheckbox.Size = new System.Drawing.Size(48, 17);
+            this.basemapcheckbox.TabIndex = 3;
+            this.basemapcheckbox.Text = "底图";
+            this.basemapcheckbox.UseSelectable = true;
             // 
             // metroCheckBox6
             // 
             this.metroCheckBox6.AutoSize = true;
-            this.metroCheckBox6.Location = new System.Drawing.Point(8, 111);
+            this.metroCheckBox6.Location = new System.Drawing.Point(19, 111);
             this.metroCheckBox6.Name = "metroCheckBox6";
             this.metroCheckBox6.Size = new System.Drawing.Size(60, 17);
             this.metroCheckBox6.TabIndex = 2;
             this.metroCheckBox6.Text = "添加一";
             this.metroCheckBox6.UseSelectable = true;
+            this.metroCheckBox6.CheckedChanged += new System.EventHandler(this.metroCheckBox6_CheckedChanged);
             // 
             // metroCheckBox5
             // 
             this.metroCheckBox5.AutoSize = true;
-            this.metroCheckBox5.Location = new System.Drawing.Point(8, 74);
+            this.metroCheckBox5.Location = new System.Drawing.Point(19, 74);
             this.metroCheckBox5.Name = "metroCheckBox5";
             this.metroCheckBox5.Size = new System.Drawing.Size(72, 17);
             this.metroCheckBox5.TabIndex = 1;
-            this.metroCheckBox5.Text = "用户轨迹";
+            this.metroCheckBox5.Text = "图层测试";
             this.metroCheckBox5.UseSelectable = true;
+            this.metroCheckBox5.CheckedChanged += new System.EventHandler(this.metroCheckBox5_CheckedChanged);
             // 
-            // button4
+            // tranext
             // 
-            this.button4.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button4.Location = new System.Drawing.Point(306, 582);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 25;
-            this.button4.Text = "下一步";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.tranext.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tranext.Location = new System.Drawing.Point(306, 582);
+            this.tranext.Name = "tranext";
+            this.tranext.Size = new System.Drawing.Size(75, 23);
+            this.tranext.TabIndex = 25;
+            this.tranext.Text = "下一步";
+            this.tranext.UseVisualStyleBackColor = true;
+            this.tranext.Click += new System.EventHandler(this.button4_Click);
             // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.SystemColors.Window;
             this.groupBox3.Controls.Add(this.button3);
-            this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Controls.Add(this.textBox4);
-            this.groupBox3.Controls.Add(this.textBox3);
-            this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Controls.Add(this.textBox2);
-            this.groupBox3.Controls.Add(this.button2);
-            this.groupBox3.Controls.Add(this.button1);
-            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.trapatext2);
+            this.groupBox3.Controls.Add(this.trapala2);
+            this.groupBox3.Controls.Add(this.trapatext1);
+            this.groupBox3.Controls.Add(this.trapalb1);
+            this.groupBox3.Controls.Add(this.trainputbt);
+            this.groupBox3.Controls.Add(this.traoutputbt);
+            this.groupBox3.Controls.Add(this.trainputtext);
+            this.groupBox3.Controls.Add(this.traoutputtext);
             this.groupBox3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox3.Location = new System.Drawing.Point(0, 10);
+            this.groupBox3.Location = new System.Drawing.Point(0, 7);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(802, 54);
+            this.groupBox3.Size = new System.Drawing.Size(166, 227);
             this.groupBox3.TabIndex = 24;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "路径与参数";
@@ -334,147 +441,240 @@ namespace MetroFramework.Demo
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button3.Location = new System.Drawing.Point(722, 22);
+            this.button3.Location = new System.Drawing.Point(19, 250);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 37;
+            this.button3.Size = new System.Drawing.Size(132, 23);
+            this.button3.TabIndex = 38;
             this.button3.Text = "开始";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // label2
+            // trapatext2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(611, 25);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 17);
-            this.label2.TabIndex = 35;
-            this.label2.Text = "参数二";
+            this.trapatext2.Location = new System.Drawing.Point(69, 189);
+            this.trapatext2.Name = "trapatext2";
+            this.trapatext2.Size = new System.Drawing.Size(82, 23);
+            this.trapatext2.TabIndex = 38;
             // 
-            // textBox4
+            // trapala2
             // 
-            this.textBox4.Location = new System.Drawing.Point(658, 22);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(50, 23);
-            this.textBox4.TabIndex = 36;
+            this.trapala2.AutoSize = true;
+            this.trapala2.Location = new System.Drawing.Point(16, 195);
+            this.trapala2.Name = "trapala2";
+            this.trapala2.Size = new System.Drawing.Size(44, 17);
+            this.trapala2.TabIndex = 35;
+            this.trapala2.Text = "参数一";
             // 
-            // textBox3
+            // trapatext1
             // 
-            this.textBox3.Location = new System.Drawing.Point(538, 21);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(50, 23);
-            this.textBox3.TabIndex = 34;
+            this.trapatext1.Location = new System.Drawing.Point(69, 146);
+            this.trapatext1.Name = "trapatext1";
+            this.trapatext1.Size = new System.Drawing.Size(82, 23);
+            this.trapatext1.TabIndex = 36;
             // 
-            // label1
+            // trapalb1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(492, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 17);
-            this.label1.TabIndex = 33;
-            this.label1.Text = "参数一";
+            this.trapalb1.AutoSize = true;
+            this.trapalb1.Location = new System.Drawing.Point(16, 149);
+            this.trapalb1.Name = "trapalb1";
+            this.trapalb1.Size = new System.Drawing.Size(44, 17);
+            this.trapalb1.TabIndex = 37;
+            this.trapalb1.Text = "参数二";
             // 
-            // textBox2
+            // trainputbt
             // 
-            this.textBox2.Location = new System.Drawing.Point(306, 22);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(166, 23);
-            this.textBox2.TabIndex = 32;
+            this.trainputbt.Location = new System.Drawing.Point(6, 89);
+            this.trainputbt.Name = "trainputbt";
+            this.trainputbt.Size = new System.Drawing.Size(54, 23);
+            this.trainputbt.TabIndex = 29;
+            this.trainputbt.Text = "输入";
+            this.trainputbt.UseVisualStyleBackColor = true;
+            this.trainputbt.Click += new System.EventHandler(this.trainputbt_Click_1);
             // 
-            // button2
+            // traoutputbt
             // 
-            this.button2.Location = new System.Drawing.Point(248, 22);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(54, 23);
-            this.button2.TabIndex = 31;
-            this.button2.Text = "输出";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            this.traoutputbt.Location = new System.Drawing.Point(6, 40);
+            this.traoutputbt.Name = "traoutputbt";
+            this.traoutputbt.Size = new System.Drawing.Size(54, 23);
+            this.traoutputbt.TabIndex = 31;
+            this.traoutputbt.Text = "输出";
+            this.traoutputbt.UseVisualStyleBackColor = true;
+            this.traoutputbt.Click += new System.EventHandler(this.traoutputbt_Click_1);
             // 
-            // button1
+            // trainputtext
             // 
-            this.button1.Location = new System.Drawing.Point(8, 22);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(54, 23);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "输入";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.trainputtext.Location = new System.Drawing.Point(69, 89);
+            this.trainputtext.Name = "trainputtext";
+            this.trainputtext.Size = new System.Drawing.Size(82, 23);
+            this.trainputtext.TabIndex = 30;
             // 
-            // textBox1
+            // traoutputtext
             // 
-            this.textBox1.Location = new System.Drawing.Point(66, 22);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(166, 23);
-            this.textBox1.TabIndex = 30;
+            this.traoutputtext.Location = new System.Drawing.Point(69, 40);
+            this.traoutputtext.Name = "traoutputtext";
+            this.traoutputtext.Size = new System.Drawing.Size(82, 23);
+            this.traoutputtext.TabIndex = 32;
             // 
-            // button6
+            // tracancel
             // 
-            this.button6.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button6.Location = new System.Drawing.Point(513, 582);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 23;
-            this.button6.Text = "取消";
-            this.button6.UseVisualStyleBackColor = true;
+            this.tracancel.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tracancel.Location = new System.Drawing.Point(513, 582);
+            this.tracancel.Name = "tracancel";
+            this.tracancel.Size = new System.Drawing.Size(75, 23);
+            this.tracancel.TabIndex = 23;
+            this.tracancel.Text = "取消";
+            this.tracancel.UseVisualStyleBackColor = true;
             // 
-            // metroTabPage1
+            // stopptTabPage
             // 
-            this.metroTabPage1.AutoScroll = true;
-            this.metroTabPage1.Controls.Add(this.groupBox14);
-            this.metroTabPage1.Controls.Add(this.groupBox13);
-            this.metroTabPage1.Controls.Add(this.groupBox4);
-            this.metroTabPage1.Controls.Add(this.button10);
-            this.metroTabPage1.Controls.Add(this.button9);
-            this.metroTabPage1.Controls.Add(this.button8);
-            this.metroTabPage1.Controls.Add(this.groupBox2);
-            this.metroTabPage1.HorizontalScrollbar = true;
-            this.metroTabPage1.HorizontalScrollbarBarColor = false;
-            this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.HorizontalScrollbarSize = 9;
-            this.metroTabPage1.Location = new System.Drawing.Point(4, 39);
-            this.metroTabPage1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Padding = new System.Windows.Forms.Padding(25, 23, 25, 23);
-            this.metroTabPage1.Size = new System.Drawing.Size(802, 605);
-            this.metroTabPage1.TabIndex = 0;
-            this.metroTabPage1.Text = "停留点探测";
-            this.metroTabPage1.VerticalScrollbar = true;
-            this.metroTabPage1.VerticalScrollbarBarColor = true;
-            this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.VerticalScrollbarSize = 10;
+            this.stopptTabPage.AutoScroll = true;
+            this.stopptTabPage.Controls.Add(this.tabControl2);
+            this.stopptTabPage.Controls.Add(this.groupBox1);
+            this.stopptTabPage.Controls.Add(this.groupBox13);
+            this.stopptTabPage.Controls.Add(this.stopptCancel);
+            this.stopptTabPage.Controls.Add(this.stopptNext);
+            this.stopptTabPage.Controls.Add(this.stopptBack);
+            this.stopptTabPage.Controls.Add(this.groupBox2);
+            this.stopptTabPage.HorizontalScrollbar = true;
+            this.stopptTabPage.HorizontalScrollbarBarColor = false;
+            this.stopptTabPage.HorizontalScrollbarHighlightOnWheel = false;
+            this.stopptTabPage.HorizontalScrollbarSize = 9;
+            this.stopptTabPage.Location = new System.Drawing.Point(4, 39);
+            this.stopptTabPage.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.stopptTabPage.Name = "stopptTabPage";
+            this.stopptTabPage.Padding = new System.Windows.Forms.Padding(25, 23, 25, 23);
+            this.stopptTabPage.Size = new System.Drawing.Size(940, 605);
+            this.stopptTabPage.TabIndex = 0;
+            this.stopptTabPage.Text = "停留点探测";
+            this.stopptTabPage.VerticalScrollbar = true;
+            this.stopptTabPage.VerticalScrollbarBarColor = true;
+            this.stopptTabPage.VerticalScrollbarHighlightOnWheel = false;
+            this.stopptTabPage.VerticalScrollbarSize = 10;
             // 
-            // groupBox14
+            // tabControl2
             // 
-            this.groupBox14.BackColor = System.Drawing.SystemColors.Window;
-            this.groupBox14.Controls.Add(this.metroCheckBox9);
-            this.groupBox14.Controls.Add(this.metroCheckBox8);
-            this.groupBox14.Location = new System.Drawing.Point(3, 124);
-            this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Size = new System.Drawing.Size(101, 399);
-            this.groupBox14.TabIndex = 17;
-            this.groupBox14.TabStop = false;
-            this.groupBox14.Text = "可视化参数";
+            this.tabControl2.Controls.Add(this.tabPage3);
+            this.tabControl2.Controls.Add(this.tabPage4);
+            this.tabControl2.Location = new System.Drawing.Point(175, 5);
+            this.tabControl2.Name = "tabControl2";
+            this.tabControl2.SelectedIndex = 0;
+            this.tabControl2.Size = new System.Drawing.Size(756, 503);
+            this.tabControl2.TabIndex = 31;
             // 
-            // metroCheckBox9
+            // tabPage3
             // 
-            this.metroCheckBox9.AutoSize = true;
-            this.metroCheckBox9.Location = new System.Drawing.Point(10, 78);
-            this.metroCheckBox9.Name = "metroCheckBox9";
-            this.metroCheckBox9.Size = new System.Drawing.Size(79, 17);
-            this.metroCheckBox9.TabIndex = 1;
-            this.metroCheckBox9.Text = "可选参数2";
-            this.metroCheckBox9.UseSelectable = true;
+            this.tabPage3.Controls.Add(this.mapboxstoppt);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(748, 477);
+            this.tabPage3.TabIndex = 0;
+            this.tabPage3.Text = "地图";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // mapboxstoppt
+            // 
+            this.mapboxstoppt.ActiveTool = SharpMap.Forms.MapBox.Tools.None;
+            this.mapboxstoppt.Cursor = System.Windows.Forms.Cursors.Default;
+            this.mapboxstoppt.FineZoomFactor = 10D;
+            this.mapboxstoppt.Location = new System.Drawing.Point(3, 3);
+            this.mapboxstoppt.MapQueryMode = SharpMap.Forms.MapBox.MapQueryType.LayerByIndex;
+            this.mapboxstoppt.Name = "mapboxstoppt";
+            this.mapboxstoppt.QueryGrowFactor = 5F;
+            this.mapboxstoppt.QueryLayerIndex = 0;
+            this.mapboxstoppt.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
+            this.mapboxstoppt.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
+            this.mapboxstoppt.ShowProgressUpdate = false;
+            this.mapboxstoppt.Size = new System.Drawing.Size(742, 473);
+            this.mapboxstoppt.TabIndex = 0;
+            this.mapboxstoppt.Text = "mapBox2";
+            this.mapboxstoppt.WheelZoomMagnitude = -2D;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(748, 477);
+            this.tabPage4.TabIndex = 1;
+            this.tabPage4.Text = "统计图";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.groupBox1.Controls.Add(this.metroCheckBox7);
+            this.groupBox1.Controls.Add(this.metroCheckBox8);
+            this.groupBox1.Controls.Add(this.metroCheckBox9);
+            this.groupBox1.Controls.Add(this.metroCheckBox19);
+            this.groupBox1.Controls.Add(this.metroCheckBox20);
+            this.groupBox1.Controls.Add(this.metroCheckBox21);
+            this.groupBox1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox1.Location = new System.Drawing.Point(3, 249);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(166, 270);
+            this.groupBox1.TabIndex = 30;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "图层操作";
+            // 
+            // metroCheckBox7
+            // 
+            this.metroCheckBox7.AutoSize = true;
+            this.metroCheckBox7.Location = new System.Drawing.Point(8, 229);
+            this.metroCheckBox7.Name = "metroCheckBox7";
+            this.metroCheckBox7.Size = new System.Drawing.Size(60, 17);
+            this.metroCheckBox7.TabIndex = 6;
+            this.metroCheckBox7.Text = "添加四";
+            this.metroCheckBox7.UseSelectable = true;
             // 
             // metroCheckBox8
             // 
             this.metroCheckBox8.AutoSize = true;
-            this.metroCheckBox8.Location = new System.Drawing.Point(10, 37);
+            this.metroCheckBox8.Location = new System.Drawing.Point(8, 191);
             this.metroCheckBox8.Name = "metroCheckBox8";
-            this.metroCheckBox8.Size = new System.Drawing.Size(72, 17);
-            this.metroCheckBox8.TabIndex = 0;
-            this.metroCheckBox8.Text = "可选参数";
+            this.metroCheckBox8.Size = new System.Drawing.Size(60, 17);
+            this.metroCheckBox8.TabIndex = 5;
+            this.metroCheckBox8.Text = "添加三";
             this.metroCheckBox8.UseSelectable = true;
+            // 
+            // metroCheckBox9
+            // 
+            this.metroCheckBox9.AutoSize = true;
+            this.metroCheckBox9.Location = new System.Drawing.Point(8, 153);
+            this.metroCheckBox9.Name = "metroCheckBox9";
+            this.metroCheckBox9.Size = new System.Drawing.Size(60, 17);
+            this.metroCheckBox9.TabIndex = 4;
+            this.metroCheckBox9.Text = "添加二";
+            this.metroCheckBox9.UseSelectable = true;
+            // 
+            // metroCheckBox19
+            // 
+            this.metroCheckBox19.AutoSize = true;
+            this.metroCheckBox19.Location = new System.Drawing.Point(8, 36);
+            this.metroCheckBox19.Name = "metroCheckBox19";
+            this.metroCheckBox19.Size = new System.Drawing.Size(48, 17);
+            this.metroCheckBox19.TabIndex = 3;
+            this.metroCheckBox19.Text = "底图";
+            this.metroCheckBox19.UseSelectable = true;
+            // 
+            // metroCheckBox20
+            // 
+            this.metroCheckBox20.AutoSize = true;
+            this.metroCheckBox20.Location = new System.Drawing.Point(8, 111);
+            this.metroCheckBox20.Name = "metroCheckBox20";
+            this.metroCheckBox20.Size = new System.Drawing.Size(60, 17);
+            this.metroCheckBox20.TabIndex = 2;
+            this.metroCheckBox20.Text = "添加一";
+            this.metroCheckBox20.UseSelectable = true;
+            // 
+            // metroCheckBox21
+            // 
+            this.metroCheckBox21.AutoSize = true;
+            this.metroCheckBox21.Location = new System.Drawing.Point(8, 74);
+            this.metroCheckBox21.Name = "metroCheckBox21";
+            this.metroCheckBox21.Size = new System.Drawing.Size(72, 17);
+            this.metroCheckBox21.TabIndex = 1;
+            this.metroCheckBox21.Text = "用户轨迹";
+            this.metroCheckBox21.UseSelectable = true;
             // 
             // groupBox13
             // 
@@ -482,7 +682,7 @@ namespace MetroFramework.Demo
             this.groupBox13.Controls.Add(this.metroProgressBar2);
             this.groupBox13.Location = new System.Drawing.Point(3, 529);
             this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(799, 46);
+            this.groupBox13.Size = new System.Drawing.Size(934, 46);
             this.groupBox13.TabIndex = 16;
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "进度";
@@ -494,167 +694,154 @@ namespace MetroFramework.Demo
             this.metroProgressBar2.Size = new System.Drawing.Size(670, 23);
             this.metroProgressBar2.TabIndex = 0;
             // 
-            // groupBox4
+            // stopptCancel
             // 
-            this.groupBox4.BackColor = System.Drawing.SystemColors.Window;
-            this.groupBox4.Controls.Add(this.listBox1);
-            this.groupBox4.Controls.Add(this.button7);
-            this.groupBox4.Controls.Add(this.textBox7);
-            this.groupBox4.Controls.Add(this.textBox5);
-            this.groupBox4.Controls.Add(this.metroLabel2);
-            this.groupBox4.Controls.Add(this.textBox6);
-            this.groupBox4.Controls.Add(this.metroLabel3);
-            this.groupBox4.Controls.Add(this.metroButton1);
-            this.groupBox4.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox4.Location = new System.Drawing.Point(0, 6);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(802, 99);
-            this.groupBox4.TabIndex = 15;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "路径与参数";
+            this.stopptCancel.Location = new System.Drawing.Point(462, 580);
+            this.stopptCancel.Name = "stopptCancel";
+            this.stopptCancel.Size = new System.Drawing.Size(75, 23);
+            this.stopptCancel.TabIndex = 14;
+            this.stopptCancel.Text = "取消";
+            this.stopptCancel.UseVisualStyleBackColor = true;
             // 
-            // listBox1
+            // stopptNext
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 17;
-            this.listBox1.Location = new System.Drawing.Point(547, 26);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(245, 55);
-            this.listBox1.TabIndex = 18;
+            this.stopptNext.Location = new System.Drawing.Point(370, 580);
+            this.stopptNext.Name = "stopptNext";
+            this.stopptNext.Size = new System.Drawing.Size(75, 23);
+            this.stopptNext.TabIndex = 13;
+            this.stopptNext.Text = "下一步";
+            this.stopptNext.UseVisualStyleBackColor = true;
+            this.stopptNext.Click += new System.EventHandler(this.button9_Click);
             // 
-            // button7
+            // stopptBack
             // 
-            this.button7.Location = new System.Drawing.Point(408, 26);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(113, 55);
-            this.button7.TabIndex = 17;
-            this.button7.Text = "开始";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(203, 63);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(50, 23);
-            this.textBox7.TabIndex = 8;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(119, 26);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(134, 23);
-            this.textBox5.TabIndex = 3;
-            // 
-            // metroLabel2
-            // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(13, 66);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(51, 20);
-            this.metroLabel2.TabIndex = 5;
-            this.metroLabel2.Text = "参数一";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(68, 63);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(50, 23);
-            this.textBox6.TabIndex = 6;
-            // 
-            // metroLabel3
-            // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(146, 66);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(51, 20);
-            this.metroLabel3.TabIndex = 7;
-            this.metroLabel3.Text = "参数二";
-            // 
-            // metroButton1
-            // 
-            this.metroButton1.Location = new System.Drawing.Point(13, 26);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(91, 23);
-            this.metroButton1.TabIndex = 9;
-            this.metroButton1.Text = "输出路径";
-            this.metroButton1.UseSelectable = true;
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(462, 580);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
-            this.button10.TabIndex = 14;
-            this.button10.Text = "取消";
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(370, 580);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
-            this.button9.TabIndex = 13;
-            this.button9.Text = "下一步";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(279, 581);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 12;
-            this.button8.Text = "上一步";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.stopptBack.Location = new System.Drawing.Point(279, 581);
+            this.stopptBack.Name = "stopptBack";
+            this.stopptBack.Size = new System.Drawing.Size(75, 23);
+            this.stopptBack.TabIndex = 12;
+            this.stopptBack.Text = "上一步";
+            this.stopptBack.UseVisualStyleBackColor = true;
+            this.stopptBack.Click += new System.EventHandler(this.button8_Click);
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.groupBox2.Controls.Add(this.pictureBox2);
+            this.groupBox2.Controls.Add(this.button5);
+            this.groupBox2.Controls.Add(this.textBox5);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.textBox6);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.button7);
+            this.groupBox2.Controls.Add(this.button17);
+            this.groupBox2.Controls.Add(this.textBox7);
+            this.groupBox2.Controls.Add(this.textBox16);
             this.groupBox2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox2.Location = new System.Drawing.Point(119, 124);
+            this.groupBox2.Location = new System.Drawing.Point(4, 8);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(683, 399);
-            this.groupBox2.TabIndex = 10;
+            this.groupBox2.Size = new System.Drawing.Size(166, 227);
+            this.groupBox2.TabIndex = 29;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "统计与可视化";
+            this.groupBox2.Text = "路径与参数";
             // 
-            // pictureBox2
+            // button5
             // 
-            this.pictureBox2.Image = global::MetroFramework.Demo.Properties.Resources.搜狗截图20161024094052;
-            this.pictureBox2.Location = new System.Drawing.Point(6, 22);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(667, 371);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
+            this.button5.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button5.Location = new System.Drawing.Point(19, 250);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(132, 23);
+            this.button5.TabIndex = 38;
+            this.button5.Text = "开始";
+            this.button5.UseVisualStyleBackColor = true;
             // 
-            // metroTabPage2
+            // textBox5
             // 
-            this.metroTabPage2.Controls.Add(this.groupBox16);
-            this.metroTabPage2.Controls.Add(this.groupBox15);
-            this.metroTabPage2.Controls.Add(this.button14);
-            this.metroTabPage2.Controls.Add(this.button13);
-            this.metroTabPage2.Controls.Add(this.button12);
-            this.metroTabPage2.Controls.Add(this.groupBox6);
-            this.metroTabPage2.Controls.Add(this.groupBox5);
-            this.metroTabPage2.HorizontalScrollbar = true;
-            this.metroTabPage2.HorizontalScrollbarBarColor = true;
-            this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage2.HorizontalScrollbarSize = 9;
-            this.metroTabPage2.Location = new System.Drawing.Point(4, 39);
-            this.metroTabPage2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.metroTabPage2.Name = "metroTabPage2";
-            this.metroTabPage2.Padding = new System.Windows.Forms.Padding(25, 23, 25, 23);
-            this.metroTabPage2.Size = new System.Drawing.Size(802, 605);
-            this.metroTabPage2.TabIndex = 2;
-            this.metroTabPage2.Text = "活动分析";
-            this.metroTabPage2.VerticalScrollbar = true;
-            this.metroTabPage2.VerticalScrollbarBarColor = true;
-            this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage2.VerticalScrollbarSize = 10;
-            this.metroTabPage2.Visible = false;
+            this.textBox5.Location = new System.Drawing.Point(69, 189);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(82, 23);
+            this.textBox5.TabIndex = 38;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(16, 195);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 17);
+            this.label3.TabIndex = 35;
+            this.label3.Text = "参数一";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(69, 146);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(82, 23);
+            this.textBox6.TabIndex = 36;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(16, 149);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(44, 17);
+            this.label4.TabIndex = 37;
+            this.label4.Text = "参数二";
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(6, 89);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(54, 23);
+            this.button7.TabIndex = 29;
+            this.button7.Text = "输入";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button17
+            // 
+            this.button17.Location = new System.Drawing.Point(6, 40);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(54, 23);
+            this.button17.TabIndex = 31;
+            this.button17.Text = "输出";
+            this.button17.UseVisualStyleBackColor = true;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(69, 89);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(82, 23);
+            this.textBox7.TabIndex = 30;
+            // 
+            // textBox16
+            // 
+            this.textBox16.Location = new System.Drawing.Point(69, 40);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(82, 23);
+            this.textBox16.TabIndex = 32;
+            // 
+            // actTabPage
+            // 
+            this.actTabPage.Controls.Add(this.groupBox16);
+            this.actTabPage.Controls.Add(this.groupBox15);
+            this.actTabPage.Controls.Add(this.button14);
+            this.actTabPage.Controls.Add(this.button13);
+            this.actTabPage.Controls.Add(this.button12);
+            this.actTabPage.Controls.Add(this.groupBox6);
+            this.actTabPage.Controls.Add(this.groupBox5);
+            this.actTabPage.HorizontalScrollbar = true;
+            this.actTabPage.HorizontalScrollbarBarColor = true;
+            this.actTabPage.HorizontalScrollbarHighlightOnWheel = false;
+            this.actTabPage.HorizontalScrollbarSize = 9;
+            this.actTabPage.Location = new System.Drawing.Point(4, 39);
+            this.actTabPage.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.actTabPage.Name = "actTabPage";
+            this.actTabPage.Padding = new System.Windows.Forms.Padding(25, 23, 25, 23);
+            this.actTabPage.Size = new System.Drawing.Size(940, 605);
+            this.actTabPage.TabIndex = 2;
+            this.actTabPage.Text = "活动分析";
+            this.actTabPage.VerticalScrollbar = true;
+            this.actTabPage.VerticalScrollbarBarColor = true;
+            this.actTabPage.VerticalScrollbarHighlightOnWheel = false;
+            this.actTabPage.VerticalScrollbarSize = 10;
+            this.actTabPage.Visible = false;
             // 
             // groupBox16
             // 
@@ -679,9 +866,9 @@ namespace MetroFramework.Demo
             this.groupBox15.BackColor = System.Drawing.SystemColors.Window;
             this.groupBox15.Controls.Add(this.metroCheckBox11);
             this.groupBox15.Controls.Add(this.metroCheckBox10);
-            this.groupBox15.Location = new System.Drawing.Point(0, 84);
+            this.groupBox15.Location = new System.Drawing.Point(0, 374);
             this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Size = new System.Drawing.Size(97, 430);
+            this.groupBox15.Size = new System.Drawing.Size(203, 140);
             this.groupBox15.TabIndex = 9;
             this.groupBox15.TabStop = false;
             this.groupBox15.Text = "可视化参数";
@@ -689,7 +876,7 @@ namespace MetroFramework.Demo
             // metroCheckBox11
             // 
             this.metroCheckBox11.AutoSize = true;
-            this.metroCheckBox11.Location = new System.Drawing.Point(10, 93);
+            this.metroCheckBox11.Location = new System.Drawing.Point(37, 97);
             this.metroCheckBox11.Name = "metroCheckBox11";
             this.metroCheckBox11.Size = new System.Drawing.Size(79, 17);
             this.metroCheckBox11.TabIndex = 1;
@@ -699,7 +886,7 @@ namespace MetroFramework.Demo
             // metroCheckBox10
             // 
             this.metroCheckBox10.AutoSize = true;
-            this.metroCheckBox10.Location = new System.Drawing.Point(10, 53);
+            this.metroCheckBox10.Location = new System.Drawing.Point(37, 57);
             this.metroCheckBox10.Name = "metroCheckBox10";
             this.metroCheckBox10.Size = new System.Drawing.Size(79, 17);
             this.metroCheckBox10.TabIndex = 0;
@@ -740,9 +927,9 @@ namespace MetroFramework.Demo
             this.groupBox6.BackColor = System.Drawing.SystemColors.Window;
             this.groupBox6.Controls.Add(this.pictureBox3);
             this.groupBox6.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox6.Location = new System.Drawing.Point(103, 84);
+            this.groupBox6.Location = new System.Drawing.Point(216, 18);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(696, 430);
+            this.groupBox6.Size = new System.Drawing.Size(696, 496);
             this.groupBox6.TabIndex = 3;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "统计与可视化";
@@ -760,78 +947,21 @@ namespace MetroFramework.Demo
             // groupBox5
             // 
             this.groupBox5.BackColor = System.Drawing.SystemColors.Window;
-            this.groupBox5.Controls.Add(this.button11);
-            this.groupBox5.Controls.Add(this.textBox10);
-            this.groupBox5.Controls.Add(this.metroLabel7);
-            this.groupBox5.Controls.Add(this.textBox9);
-            this.groupBox5.Controls.Add(this.textBox8);
-            this.groupBox5.Controls.Add(this.metroLabel6);
-            this.groupBox5.Controls.Add(this.metroLabel5);
             this.groupBox5.Controls.Add(this.comboBox1);
+            this.groupBox5.Controls.Add(this.textBox9);
+            this.groupBox5.Controls.Add(this.button11);
+            this.groupBox5.Controls.Add(this.metroLabel1);
+            this.groupBox5.Controls.Add(this.textBox10);
+            this.groupBox5.Controls.Add(this.metroLabel6);
+            this.groupBox5.Controls.Add(this.metroLabel7);
+            this.groupBox5.Controls.Add(this.textBox21);
             this.groupBox5.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox5.Location = new System.Drawing.Point(0, 12);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(799, 54);
+            this.groupBox5.Size = new System.Drawing.Size(203, 341);
             this.groupBox5.TabIndex = 2;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "参数选择";
-            // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(619, 18);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(75, 23);
-            this.button11.TabIndex = 9;
-            this.button11.Text = "开始";
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(512, 18);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(61, 23);
-            this.textBox10.TabIndex = 6;
-            // 
-            // metroLabel7
-            // 
-            this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(440, 20);
-            this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(51, 20);
-            this.metroLabel7.TabIndex = 5;
-            this.metroLabel7.Text = "参数三";
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(377, 19);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(46, 23);
-            this.textBox9.TabIndex = 4;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(235, 19);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(64, 23);
-            this.textBox8.TabIndex = 3;
-            // 
-            // metroLabel6
-            // 
-            this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Location = new System.Drawing.Point(305, 20);
-            this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(51, 20);
-            this.metroLabel6.TabIndex = 2;
-            this.metroLabel6.Text = "参数二";
-            // 
-            // metroLabel5
-            // 
-            this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(152, 20);
-            this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(51, 20);
-            this.metroLabel5.TabIndex = 1;
-            this.metroLabel5.Text = "参数一";
             // 
             // comboBox1
             // 
@@ -839,34 +969,91 @@ namespace MetroFramework.Demo
             this.comboBox1.Items.AddRange(new object[] {
             "居家工作分析",
             "社会活动分析"});
-            this.comboBox1.Location = new System.Drawing.Point(10, 21);
+            this.comboBox1.Location = new System.Drawing.Point(28, 22);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(106, 25);
+            this.comboBox1.Size = new System.Drawing.Size(113, 25);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.Text = "居家工作分析";
             // 
-            // metroTabPage3
+            // textBox9
             // 
-            this.metroTabPage3.Controls.Add(this.groupBox18);
-            this.metroTabPage3.Controls.Add(this.groupBox17);
-            this.metroTabPage3.Controls.Add(this.button18);
-            this.metroTabPage3.Controls.Add(this.button16);
-            this.metroTabPage3.Controls.Add(this.groupBox8);
-            this.metroTabPage3.Controls.Add(this.groupBox7);
-            this.metroTabPage3.HorizontalScrollbarBarColor = true;
-            this.metroTabPage3.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage3.HorizontalScrollbarSize = 9;
-            this.metroTabPage3.Location = new System.Drawing.Point(4, 39);
-            this.metroTabPage3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.metroTabPage3.Name = "metroTabPage3";
-            this.metroTabPage3.Padding = new System.Windows.Forms.Padding(25, 23, 25, 23);
-            this.metroTabPage3.Size = new System.Drawing.Size(802, 605);
-            this.metroTabPage3.TabIndex = 3;
-            this.metroTabPage3.Text = "出行分析";
-            this.metroTabPage3.VerticalScrollbarBarColor = true;
-            this.metroTabPage3.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage3.VerticalScrollbarSize = 10;
-            this.metroTabPage3.Visible = false;
+            this.textBox9.Location = new System.Drawing.Point(95, 106);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(46, 23);
+            this.textBox9.TabIndex = 4;
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(23, 202);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(118, 23);
+            this.button11.TabIndex = 9;
+            this.button11.Text = "开始";
+            this.button11.UseVisualStyleBackColor = true;
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(23, 58);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(51, 20);
+            this.metroLabel1.TabIndex = 1;
+            this.metroLabel1.Text = "参数一";
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(95, 147);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(46, 23);
+            this.textBox10.TabIndex = 6;
+            // 
+            // metroLabel6
+            // 
+            this.metroLabel6.AutoSize = true;
+            this.metroLabel6.Location = new System.Drawing.Point(23, 107);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(51, 20);
+            this.metroLabel6.TabIndex = 2;
+            this.metroLabel6.Text = "参数二";
+            // 
+            // metroLabel7
+            // 
+            this.metroLabel7.AutoSize = true;
+            this.metroLabel7.Location = new System.Drawing.Point(23, 149);
+            this.metroLabel7.Name = "metroLabel7";
+            this.metroLabel7.Size = new System.Drawing.Size(51, 20);
+            this.metroLabel7.TabIndex = 5;
+            this.metroLabel7.Text = "参数三";
+            // 
+            // textBox21
+            // 
+            this.textBox21.Location = new System.Drawing.Point(95, 58);
+            this.textBox21.Name = "textBox21";
+            this.textBox21.Size = new System.Drawing.Size(46, 23);
+            this.textBox21.TabIndex = 3;
+            // 
+            // travelTabPage
+            // 
+            this.travelTabPage.Controls.Add(this.groupBox18);
+            this.travelTabPage.Controls.Add(this.groupBox17);
+            this.travelTabPage.Controls.Add(this.button18);
+            this.travelTabPage.Controls.Add(this.button16);
+            this.travelTabPage.Controls.Add(this.groupBox8);
+            this.travelTabPage.Controls.Add(this.groupBox7);
+            this.travelTabPage.HorizontalScrollbarBarColor = true;
+            this.travelTabPage.HorizontalScrollbarHighlightOnWheel = false;
+            this.travelTabPage.HorizontalScrollbarSize = 9;
+            this.travelTabPage.Location = new System.Drawing.Point(4, 39);
+            this.travelTabPage.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.travelTabPage.Name = "travelTabPage";
+            this.travelTabPage.Padding = new System.Windows.Forms.Padding(25, 23, 25, 23);
+            this.travelTabPage.Size = new System.Drawing.Size(940, 605);
+            this.travelTabPage.TabIndex = 3;
+            this.travelTabPage.Text = "出行分析";
+            this.travelTabPage.VerticalScrollbarBarColor = true;
+            this.travelTabPage.VerticalScrollbarHighlightOnWheel = false;
+            this.travelTabPage.VerticalScrollbarSize = 10;
+            this.travelTabPage.Visible = false;
             // 
             // groupBox18
             // 
@@ -891,9 +1078,9 @@ namespace MetroFramework.Demo
             this.groupBox17.BackColor = System.Drawing.SystemColors.Window;
             this.groupBox17.Controls.Add(this.metroCheckBox13);
             this.groupBox17.Controls.Add(this.metroCheckBox12);
-            this.groupBox17.Location = new System.Drawing.Point(0, 79);
+            this.groupBox17.Location = new System.Drawing.Point(0, 209);
             this.groupBox17.Name = "groupBox17";
-            this.groupBox17.Size = new System.Drawing.Size(95, 427);
+            this.groupBox17.Size = new System.Drawing.Size(153, 297);
             this.groupBox17.TabIndex = 8;
             this.groupBox17.TabStop = false;
             this.groupBox17.Text = "可视化参数";
@@ -943,9 +1130,9 @@ namespace MetroFramework.Demo
             this.groupBox8.Controls.Add(this.pictureBox4);
             this.groupBox8.Controls.Add(this.metroLabel13);
             this.groupBox8.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox8.Location = new System.Drawing.Point(101, 79);
+            this.groupBox8.Location = new System.Drawing.Point(183, 14);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(698, 427);
+            this.groupBox8.Size = new System.Drawing.Size(757, 492);
             this.groupBox8.TabIndex = 3;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "统计与可视化";
@@ -955,7 +1142,7 @@ namespace MetroFramework.Demo
             this.pictureBox4.Image = global::MetroFramework.Demo.Properties.Resources.搜狗截图20161024094052;
             this.pictureBox4.Location = new System.Drawing.Point(16, 22);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(676, 390);
+            this.pictureBox4.Size = new System.Drawing.Size(721, 390);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
@@ -982,14 +1169,14 @@ namespace MetroFramework.Demo
             this.groupBox7.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox7.Location = new System.Drawing.Point(0, 14);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(799, 49);
+            this.groupBox7.Size = new System.Drawing.Size(163, 189);
             this.groupBox7.TabIndex = 2;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "参数选择";
             // 
             // button15
             // 
-            this.button15.Location = new System.Drawing.Point(595, 18);
+            this.button15.Location = new System.Drawing.Point(28, 149);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(75, 23);
             this.button15.TabIndex = 6;
@@ -998,14 +1185,14 @@ namespace MetroFramework.Demo
             // 
             // textBox13
             // 
-            this.textBox13.Location = new System.Drawing.Point(444, 18);
+            this.textBox13.Location = new System.Drawing.Point(79, 103);
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(50, 23);
             this.textBox13.TabIndex = 5;
             // 
             // textBox12
             // 
-            this.textBox12.Location = new System.Drawing.Point(248, 18);
+            this.textBox12.Location = new System.Drawing.Point(83, 60);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(50, 23);
             this.textBox12.TabIndex = 4;
@@ -1013,7 +1200,7 @@ namespace MetroFramework.Demo
             // metroLabel12
             // 
             this.metroLabel12.AutoSize = true;
-            this.metroLabel12.Location = new System.Drawing.Point(383, 21);
+            this.metroLabel12.Location = new System.Drawing.Point(18, 106);
             this.metroLabel12.Name = "metroLabel12";
             this.metroLabel12.Size = new System.Drawing.Size(51, 20);
             this.metroLabel12.TabIndex = 3;
@@ -1022,7 +1209,7 @@ namespace MetroFramework.Demo
             // metroLabel11
             // 
             this.metroLabel11.AutoSize = true;
-            this.metroLabel11.Location = new System.Drawing.Point(185, 21);
+            this.metroLabel11.Location = new System.Drawing.Point(20, 63);
             this.metroLabel11.Name = "metroLabel11";
             this.metroLabel11.Size = new System.Drawing.Size(51, 20);
             this.metroLabel11.TabIndex = 2;
@@ -1044,36 +1231,36 @@ namespace MetroFramework.Demo
             this.metroLabel10.TabIndex = 0;
             this.metroLabel10.Text = "参数一";
             // 
-            // metroTabPage4
+            // batchTabPage
             // 
-            this.metroTabPage4.Controls.Add(this.groupBox20);
-            this.metroTabPage4.Controls.Add(this.groupBox19);
-            this.metroTabPage4.Controls.Add(this.button22);
-            this.metroTabPage4.Controls.Add(this.button21);
-            this.metroTabPage4.Controls.Add(this.groupBox10);
-            this.metroTabPage4.Controls.Add(this.groupBox9);
-            this.metroTabPage4.HorizontalScrollbarBarColor = true;
-            this.metroTabPage4.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage4.HorizontalScrollbarSize = 9;
-            this.metroTabPage4.Location = new System.Drawing.Point(4, 39);
-            this.metroTabPage4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.metroTabPage4.Name = "metroTabPage4";
-            this.metroTabPage4.Size = new System.Drawing.Size(802, 605);
-            this.metroTabPage4.TabIndex = 5;
-            this.metroTabPage4.Text = "批量处理";
-            this.metroTabPage4.VerticalScrollbarBarColor = true;
-            this.metroTabPage4.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage4.VerticalScrollbarSize = 10;
-            this.metroTabPage4.Visible = false;
+            this.batchTabPage.Controls.Add(this.groupBox20);
+            this.batchTabPage.Controls.Add(this.groupBox19);
+            this.batchTabPage.Controls.Add(this.button22);
+            this.batchTabPage.Controls.Add(this.button21);
+            this.batchTabPage.Controls.Add(this.groupBox10);
+            this.batchTabPage.Controls.Add(this.groupBox9);
+            this.batchTabPage.HorizontalScrollbarBarColor = true;
+            this.batchTabPage.HorizontalScrollbarHighlightOnWheel = false;
+            this.batchTabPage.HorizontalScrollbarSize = 9;
+            this.batchTabPage.Location = new System.Drawing.Point(4, 39);
+            this.batchTabPage.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.batchTabPage.Name = "batchTabPage";
+            this.batchTabPage.Size = new System.Drawing.Size(940, 605);
+            this.batchTabPage.TabIndex = 5;
+            this.batchTabPage.Text = "批量处理";
+            this.batchTabPage.VerticalScrollbarBarColor = true;
+            this.batchTabPage.VerticalScrollbarHighlightOnWheel = false;
+            this.batchTabPage.VerticalScrollbarSize = 10;
+            this.batchTabPage.Visible = false;
             // 
             // groupBox20
             // 
             this.groupBox20.BackColor = System.Drawing.SystemColors.Window;
             this.groupBox20.Controls.Add(this.metroCheckBox15);
             this.groupBox20.Controls.Add(this.metroCheckBox14);
-            this.groupBox20.Location = new System.Drawing.Point(0, 104);
+            this.groupBox20.Location = new System.Drawing.Point(0, 348);
             this.groupBox20.Name = "groupBox20";
-            this.groupBox20.Size = new System.Drawing.Size(101, 418);
+            this.groupBox20.Size = new System.Drawing.Size(190, 174);
             this.groupBox20.TabIndex = 10;
             this.groupBox20.TabStop = false;
             this.groupBox20.Text = "可视化参数";
@@ -1124,7 +1311,6 @@ namespace MetroFramework.Demo
             this.button22.TabIndex = 8;
             this.button22.Text = "暂停";
             this.button22.UseVisualStyleBackColor = true;
-            this.button22.Click += new System.EventHandler(this.button22_Click);
             // 
             // button21
             // 
@@ -1139,9 +1325,9 @@ namespace MetroFramework.Demo
             // 
             this.groupBox10.BackColor = System.Drawing.SystemColors.Window;
             this.groupBox10.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox10.Location = new System.Drawing.Point(107, 104);
+            this.groupBox10.Location = new System.Drawing.Point(208, 16);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(692, 418);
+            this.groupBox10.Size = new System.Drawing.Size(711, 506);
             this.groupBox10.TabIndex = 3;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "统计与可视化";
@@ -1161,14 +1347,14 @@ namespace MetroFramework.Demo
             this.groupBox9.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox9.Location = new System.Drawing.Point(0, 16);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(799, 82);
+            this.groupBox9.Size = new System.Drawing.Size(190, 285);
             this.groupBox9.TabIndex = 2;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "路径与参数";
             // 
             // button24
             // 
-            this.button24.Location = new System.Drawing.Point(706, 48);
+            this.button24.Location = new System.Drawing.Point(18, 241);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(75, 23);
             this.button24.TabIndex = 8;
@@ -1178,7 +1364,7 @@ namespace MetroFramework.Demo
             // metroCheckBox4
             // 
             this.metroCheckBox4.AutoSize = true;
-            this.metroCheckBox4.Location = new System.Drawing.Point(609, 54);
+            this.metroCheckBox4.Location = new System.Drawing.Point(9, 199);
             this.metroCheckBox4.Name = "metroCheckBox4";
             this.metroCheckBox4.Size = new System.Drawing.Size(72, 17);
             this.metroCheckBox4.TabIndex = 7;
@@ -1188,7 +1374,7 @@ namespace MetroFramework.Demo
             // metroCheckBox3
             // 
             this.metroCheckBox3.AutoSize = true;
-            this.metroCheckBox3.Location = new System.Drawing.Point(609, 26);
+            this.metroCheckBox3.Location = new System.Drawing.Point(9, 171);
             this.metroCheckBox3.Name = "metroCheckBox3";
             this.metroCheckBox3.Size = new System.Drawing.Size(72, 17);
             this.metroCheckBox3.TabIndex = 6;
@@ -1198,7 +1384,7 @@ namespace MetroFramework.Demo
             // metroCheckBox2
             // 
             this.metroCheckBox2.AutoSize = true;
-            this.metroCheckBox2.Location = new System.Drawing.Point(467, 54);
+            this.metroCheckBox2.Location = new System.Drawing.Point(9, 142);
             this.metroCheckBox2.Name = "metroCheckBox2";
             this.metroCheckBox2.Size = new System.Drawing.Size(84, 17);
             this.metroCheckBox2.TabIndex = 5;
@@ -1208,7 +1394,7 @@ namespace MetroFramework.Demo
             // metroCheckBox1
             // 
             this.metroCheckBox1.AutoSize = true;
-            this.metroCheckBox1.Location = new System.Drawing.Point(467, 25);
+            this.metroCheckBox1.Location = new System.Drawing.Point(9, 113);
             this.metroCheckBox1.Name = "metroCheckBox1";
             this.metroCheckBox1.Size = new System.Drawing.Size(72, 17);
             this.metroCheckBox1.TabIndex = 4;
@@ -1219,14 +1405,14 @@ namespace MetroFramework.Demo
             // 
             this.textBox15.Location = new System.Drawing.Point(91, 52);
             this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(202, 23);
+            this.textBox15.Size = new System.Drawing.Size(56, 23);
             this.textBox15.TabIndex = 3;
             // 
             // textBox14
             // 
             this.textBox14.Location = new System.Drawing.Point(91, 22);
             this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(202, 23);
+            this.textBox14.Size = new System.Drawing.Size(56, 23);
             this.textBox14.TabIndex = 2;
             // 
             // button20
@@ -1309,42 +1495,171 @@ namespace MetroFramework.Demo
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // tabControl1
+            // metroProgressBar6
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(115, 71);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(687, 451);
-            this.tabControl1.TabIndex = 28;
+            this.metroProgressBar6.Location = new System.Drawing.Point(6, 17);
+            this.metroProgressBar6.Name = "metroProgressBar6";
+            this.metroProgressBar6.Size = new System.Drawing.Size(670, 23);
+            this.metroProgressBar6.TabIndex = 0;
             // 
-            // tabPage1
+            // textBox20
             // 
-            this.tabPage1.Controls.Add(this.mapBox2);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(679, 425);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "地图";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.textBox20.Location = new System.Drawing.Point(69, 40);
+            this.textBox20.Name = "textBox20";
+            this.textBox20.Size = new System.Drawing.Size(82, 21);
+            this.textBox20.TabIndex = 32;
             // 
-            // tabPage2
+            // textBox19
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(679, 425);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "统计图";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.textBox19.Location = new System.Drawing.Point(69, 89);
+            this.textBox19.Name = "textBox19";
+            this.textBox19.Size = new System.Drawing.Size(82, 21);
+            this.textBox19.TabIndex = 30;
+            // 
+            // button26
+            // 
+            this.button26.Location = new System.Drawing.Point(6, 40);
+            this.button26.Name = "button26";
+            this.button26.Size = new System.Drawing.Size(54, 23);
+            this.button26.TabIndex = 31;
+            this.button26.Text = "输出";
+            this.button26.UseVisualStyleBackColor = true;
+            // 
+            // button25
+            // 
+            this.button25.Location = new System.Drawing.Point(6, 89);
+            this.button25.Name = "button25";
+            this.button25.Size = new System.Drawing.Size(54, 23);
+            this.button25.TabIndex = 29;
+            this.button25.Text = "输入";
+            this.button25.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(16, 149);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(44, 17);
+            this.label6.TabIndex = 37;
+            // 
+            // textBox18
+            // 
+            this.textBox18.Location = new System.Drawing.Point(69, 146);
+            this.textBox18.Name = "textBox18";
+            this.textBox18.Size = new System.Drawing.Size(82, 21);
+            this.textBox18.TabIndex = 36;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(16, 195);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(44, 17);
+            this.label5.TabIndex = 35;
+            // 
+            // textBox17
+            // 
+            this.textBox17.Location = new System.Drawing.Point(69, 189);
+            this.textBox17.Name = "textBox17";
+            this.textBox17.Size = new System.Drawing.Size(82, 21);
+            this.textBox17.TabIndex = 38;
+            // 
+            // button23
+            // 
+            this.button23.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button23.Location = new System.Drawing.Point(19, 250);
+            this.button23.Name = "button23";
+            this.button23.Size = new System.Drawing.Size(132, 23);
+            this.button23.TabIndex = 38;
+            this.button23.Text = "开始";
+            this.button23.UseVisualStyleBackColor = true;
+            // 
+            // metroCheckBox27
+            // 
+            this.metroCheckBox27.AutoSize = true;
+            this.metroCheckBox27.Location = new System.Drawing.Point(8, 74);
+            this.metroCheckBox27.Name = "metroCheckBox27";
+            this.metroCheckBox27.Size = new System.Drawing.Size(72, 17);
+            this.metroCheckBox27.TabIndex = 1;
+            this.metroCheckBox27.Text = "用户轨迹";
+            this.metroCheckBox27.UseSelectable = true;
+            // 
+            // metroCheckBox26
+            // 
+            this.metroCheckBox26.AutoSize = true;
+            this.metroCheckBox26.Location = new System.Drawing.Point(8, 111);
+            this.metroCheckBox26.Name = "metroCheckBox26";
+            this.metroCheckBox26.Size = new System.Drawing.Size(60, 17);
+            this.metroCheckBox26.TabIndex = 2;
+            this.metroCheckBox26.Text = "添加一";
+            this.metroCheckBox26.UseSelectable = true;
+            // 
+            // metroCheckBox25
+            // 
+            this.metroCheckBox25.AutoSize = true;
+            this.metroCheckBox25.Location = new System.Drawing.Point(8, 36);
+            this.metroCheckBox25.Name = "metroCheckBox25";
+            this.metroCheckBox25.Size = new System.Drawing.Size(48, 17);
+            this.metroCheckBox25.TabIndex = 3;
+            this.metroCheckBox25.Text = "底图";
+            this.metroCheckBox25.UseSelectable = true;
+            // 
+            // metroCheckBox24
+            // 
+            this.metroCheckBox24.AutoSize = true;
+            this.metroCheckBox24.Location = new System.Drawing.Point(8, 153);
+            this.metroCheckBox24.Name = "metroCheckBox24";
+            this.metroCheckBox24.Size = new System.Drawing.Size(60, 17);
+            this.metroCheckBox24.TabIndex = 4;
+            this.metroCheckBox24.Text = "添加二";
+            this.metroCheckBox24.UseSelectable = true;
+            // 
+            // metroCheckBox23
+            // 
+            this.metroCheckBox23.AutoSize = true;
+            this.metroCheckBox23.Location = new System.Drawing.Point(8, 191);
+            this.metroCheckBox23.Name = "metroCheckBox23";
+            this.metroCheckBox23.Size = new System.Drawing.Size(60, 17);
+            this.metroCheckBox23.TabIndex = 5;
+            this.metroCheckBox23.Text = "添加三";
+            this.metroCheckBox23.UseSelectable = true;
+            // 
+            // metroCheckBox22
+            // 
+            this.metroCheckBox22.AutoSize = true;
+            this.metroCheckBox22.Location = new System.Drawing.Point(8, 229);
+            this.metroCheckBox22.Name = "metroCheckBox22";
+            this.metroCheckBox22.Size = new System.Drawing.Size(60, 17);
+            this.metroCheckBox22.TabIndex = 6;
+            this.metroCheckBox22.Text = "添加四";
+            this.metroCheckBox22.UseSelectable = true;
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(748, 477);
+            this.tabPage6.TabIndex = 1;
+            this.tabPage6.Text = "统计图";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(748, 477);
+            this.tabPage5.TabIndex = 0;
+            this.tabPage5.Text = "地图";
+            this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // mapBox2
             // 
             this.mapBox2.ActiveTool = SharpMap.Forms.MapBox.Tools.None;
+            this.mapBox2.Cursor = System.Windows.Forms.Cursors.Default;
             this.mapBox2.FineZoomFactor = 10D;
-            this.mapBox2.Location = new System.Drawing.Point(6, 6);
+            this.mapBox2.Location = new System.Drawing.Point(6, -2);
             this.mapBox2.MapQueryMode = SharpMap.Forms.MapBox.MapQueryType.LayerByIndex;
             this.mapBox2.Name = "mapBox2";
             this.mapBox2.QueryGrowFactor = 5F;
@@ -1352,40 +1667,9 @@ namespace MetroFramework.Demo
             this.mapBox2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
             this.mapBox2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
             this.mapBox2.ShowProgressUpdate = false;
-            this.mapBox2.Size = new System.Drawing.Size(667, 413);
+            this.mapBox2.Size = new System.Drawing.Size(742, 473);
             this.mapBox2.TabIndex = 0;
-            this.mapBox2.Text = "mapBox2";
             this.mapBox2.WheelZoomMagnitude = -2D;
-            // 
-            // metroCheckBox16
-            // 
-            this.metroCheckBox16.AutoSize = true;
-            this.metroCheckBox16.Location = new System.Drawing.Point(8, 153);
-            this.metroCheckBox16.Name = "metroCheckBox16";
-            this.metroCheckBox16.Size = new System.Drawing.Size(60, 17);
-            this.metroCheckBox16.TabIndex = 4;
-            this.metroCheckBox16.Text = "添加二";
-            this.metroCheckBox16.UseSelectable = true;
-            // 
-            // metroCheckBox17
-            // 
-            this.metroCheckBox17.AutoSize = true;
-            this.metroCheckBox17.Location = new System.Drawing.Point(8, 191);
-            this.metroCheckBox17.Name = "metroCheckBox17";
-            this.metroCheckBox17.Size = new System.Drawing.Size(60, 17);
-            this.metroCheckBox17.TabIndex = 5;
-            this.metroCheckBox17.Text = "添加三";
-            this.metroCheckBox17.UseSelectable = true;
-            // 
-            // metroCheckBox18
-            // 
-            this.metroCheckBox18.AutoSize = true;
-            this.metroCheckBox18.Location = new System.Drawing.Point(8, 229);
-            this.metroCheckBox18.Name = "metroCheckBox18";
-            this.metroCheckBox18.Size = new System.Drawing.Size(60, 17);
-            this.metroCheckBox18.TabIndex = 6;
-            this.metroCheckBox18.Text = "添加四";
-            this.metroCheckBox18.UseSelectable = true;
             // 
             // MainForm
             // 
@@ -1394,12 +1678,10 @@ namespace MetroFramework.Demo
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackImagePadding = new System.Windows.Forms.Padding(225, 10, 0, 0);
             this.BackMaxSize = 50;
-            this.ClientSize = new System.Drawing.Size(850, 705);
+            this.ClientSize = new System.Drawing.Size(979, 705);
             this.Controls.Add(this.metroTabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(850, 705);
             this.MinimumSize = new System.Drawing.Size(850, 705);
             this.Name = "MainForm";
             this.Padding = new System.Windows.Forms.Padding(20, 60, 20, 19);
@@ -1411,22 +1693,24 @@ namespace MetroFramework.Demo
             this.TransparencyKey = System.Drawing.Color.Empty;
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.metroTabControl1.ResumeLayout(false);
-            this.metroTabPage0.ResumeLayout(false);
+            this.traTabPage.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.groupBox12.ResumeLayout(false);
             this.groupBox12.PerformLayout();
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.metroTabPage1.ResumeLayout(false);
-            this.groupBox14.ResumeLayout(false);
-            this.groupBox14.PerformLayout();
+            this.stopptTabPage.ResumeLayout(false);
+            this.tabControl2.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.groupBox13.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.metroTabPage2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.actTabPage.ResumeLayout(false);
             this.groupBox16.ResumeLayout(false);
             this.groupBox15.ResumeLayout(false);
             this.groupBox15.PerformLayout();
@@ -1434,7 +1718,7 @@ namespace MetroFramework.Demo
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            this.metroTabPage3.ResumeLayout(false);
+            this.travelTabPage.ResumeLayout(false);
             this.groupBox18.ResumeLayout(false);
             this.groupBox17.ResumeLayout(false);
             this.groupBox17.PerformLayout();
@@ -1443,7 +1727,7 @@ namespace MetroFramework.Demo
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
-            this.metroTabPage4.ResumeLayout(false);
+            this.batchTabPage.ResumeLayout(false);
             this.groupBox20.ResumeLayout(false);
             this.groupBox20.PerformLayout();
             this.groupBox19.ResumeLayout(false);
@@ -1451,8 +1735,6 @@ namespace MetroFramework.Demo
             this.groupBox9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager)).EndInit();
             this.metroContextMenu1.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1461,10 +1743,10 @@ namespace MetroFramework.Demo
 
         private Controls.MetroTabControl metroTabControl1;
         private Components.MetroStyleManager metroStyleManager;
-        private Controls.MetroTabPage metroTabPage1;
+        private Controls.MetroTabPage stopptTabPage;
         private Components.MetroToolTip metroToolTip;
-        private Controls.MetroTabPage metroTabPage2;
-        private Controls.MetroTabPage metroTabPage3;
+        private Controls.MetroTabPage actTabPage;
+        private Controls.MetroTabPage travelTabPage;
         private Components.MetroStyleExtender metroStyleExtender;
         private Controls.MetroContextMenu metroContextMenu1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
@@ -1473,27 +1755,14 @@ namespace MetroFramework.Demo
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private Controls.MetroTabPage metroTabPage4;
-        private MetroTabPage metroTabPage0;
+        private Controls.MetroTabPage batchTabPage;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private MetroButton metroButton1;
-        private System.Windows.Forms.TextBox textBox7;
-        private MetroLabel metroLabel3;
-        private System.Windows.Forms.TextBox textBox6;
-        private MetroLabel metroLabel2;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button stopptCancel;
+        private System.Windows.Forms.Button stopptNext;
+        private System.Windows.Forms.Button stopptBack;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button12;
@@ -1502,9 +1771,7 @@ namespace MetroFramework.Demo
         private System.Windows.Forms.TextBox textBox10;
         private MetroLabel metroLabel7;
         private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
         private MetroLabel metroLabel6;
-        private MetroLabel metroLabel5;
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.GroupBox groupBox8;
@@ -1529,26 +1796,8 @@ namespace MetroFramework.Demo
         private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.Button button20;
         private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.GroupBox groupBox11;
-        private MetroCheckBox metroCheckBox6;
-        private MetroCheckBox metroCheckBox5;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private MetroCheckBox basemap1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.GroupBox groupBox12;
-        private MetroLabel metroLabel18;
-        private MetroProgressBar metroProgressBar1;
-        private System.Windows.Forms.GroupBox groupBox14;
         private System.Windows.Forms.GroupBox groupBox13;
         private MetroProgressBar metroProgressBar2;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.GroupBox groupBox16;
         private MetroProgressBar metroProgressBar3;
         private System.Windows.Forms.GroupBox groupBox15;
@@ -1561,22 +1810,81 @@ namespace MetroFramework.Demo
         private System.Windows.Forms.GroupBox groupBox19;
         private MetroProgressBar metroProgressBar5;
         private System.Windows.Forms.Button button24;
-        private MetroCheckBox metroCheckBox9;
-        private MetroCheckBox metroCheckBox8;
-        private System.Windows.Forms.ListBox listBox1;
         private MetroCheckBox metroCheckBox11;
         private MetroCheckBox metroCheckBox10;
         private MetroCheckBox metroCheckBox13;
         private MetroCheckBox metroCheckBox12;
         private MetroCheckBox metroCheckBox15;
         private MetroCheckBox metroCheckBox14;
+        private MetroTabPage traTabPage;
+        private System.Windows.Forms.Button traoutputbt;
+        private System.Windows.Forms.TextBox traoutputtext;
+        private System.Windows.Forms.TextBox trapatext1;
+        private System.Windows.Forms.Label trapala2;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label trapalb1;
+        private SharpMap.Forms.MapBox mapBoxTra;
+        private System.Windows.Forms.TextBox trapatext2;
         private System.Windows.Forms.TabPage tabPage2;
-        private SharpMap.Forms.MapBox mapBox2;
-        private MetroCheckBox metroCheckBox18;
+        private System.Windows.Forms.GroupBox groupBox12;
+        private MetroLabel metroLabel18;
+        private MetroProgressBar metroProgressBar1;
+        private System.Windows.Forms.GroupBox groupBox11;
         private MetroCheckBox metroCheckBox17;
         private MetroCheckBox metroCheckBox16;
+        private MetroCheckBox basemapcheckbox;
+        private MetroCheckBox metroCheckBox6;
+        private MetroCheckBox metroCheckBox5;
+        private System.Windows.Forms.Button tranext;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button trainputbt;
+        private System.Windows.Forms.TextBox trainputtext;
+        private System.Windows.Forms.Button tracancel;
+        private MetroLabel metroLabel1;
+        private System.Windows.Forms.TextBox textBox21;
+        private System.Windows.Forms.TabControl tabControl2;
+        private System.Windows.Forms.TabPage tabPage3;
+        private SharpMap.Forms.MapBox mapboxstoppt;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private MetroCheckBox metroCheckBox7;
+        private MetroCheckBox metroCheckBox8;
+        private MetroCheckBox metroCheckBox9;
+        private MetroCheckBox metroCheckBox19;
+        private MetroCheckBox metroCheckBox20;
+        private MetroCheckBox metroCheckBox21;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox16;
+        private MetroProgressBar metroProgressBar6;
+        private System.Windows.Forms.TextBox textBox20;
+        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.Button button26;
+        private System.Windows.Forms.Button button25;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.Button button23;
+        private MetroCheckBox metroCheckBox27;
+        private MetroCheckBox metroCheckBox26;
+        private MetroCheckBox metroCheckBox25;
+        private MetroCheckBox metroCheckBox24;
+        private MetroCheckBox metroCheckBox23;
+        private MetroCheckBox metroCheckBox22;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.TabPage tabPage5;
+        private SharpMap.Forms.MapBox mapBox2;
+        private System.Windows.Forms.Button button27;
     }
 }
 

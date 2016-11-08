@@ -10,17 +10,20 @@ namespace MetroFramework.Demo
     class MapGeneration
     {
         private SharpMap.Forms.MapBox map;
+        SharpMap.Layers.VectorLayer baselayer;
+        List<string> layerbase;
 
         public MapGeneration()
         {
-
+            
         }
 
         public void AddMapbox(SharpMap.Forms.MapBox map)
         {
+            layerbase = new List<string>();
             this.map = map;
             map.Refresh();
-            SharpMap.Layers.VectorLayer baselayer = new SharpMap.Layers.VectorLayer("States");
+            baselayer = new SharpMap.Layers.VectorLayer("States");
             baselayer.DataSource = new SharpMap.Data.Providers.ShapeFile(@"../../../map/SZ_DISTR/SZ_DISTR.shp", true);
 
 
@@ -50,6 +53,7 @@ namespace MetroFramework.Demo
             //分配主题
             baselayer.Theme = new SharpMap.Rendering.Thematics.UniqueValuesTheme<string>("DISTRICT", styles, style1);
             map.Map.Layers.Add(baselayer);
+            layerbase.Add(baselayer.LayerName);
 
 
             map.Map.ZoomToExtents();
@@ -57,28 +61,23 @@ namespace MetroFramework.Demo
             map.ActiveTool = SharpMap.Forms.MapBox.Tools.Pan;
         }
 
-        public void AddLayer(string str, SharpMap.Layers.VectorLayer layername)
+        public void AddLayer(SharpMap.Layers.VectorLayer Layeritem)
         {
             
-            layername = new SharpMap.Layers.VectorLayer("road");
-            layername.DataSource = new SharpMap.Data.Providers.ShapeFile(str, true);
-            VectorStyle style1 = new VectorStyle();
-            style1.Fill = new SolidBrush(Color.FromArgb(232, 232, 232));
-            Dictionary<string, SharpMap.Styles.IStyle> styles = new Dictionary<string, IStyle>();
-            layername.Theme = new SharpMap.Rendering.Thematics.UniqueValuesTheme<string>("DISTRICT", styles, style1);
-            map.Map.Layers.Add(layername);
+
+            map.Map.Layers.Add(Layeritem);
+            layerbase.Add(Layeritem.LayerName);
             map.Map.ZoomToExtents();
             map.Refresh();
-            map.ActiveTool = SharpMap.Forms.MapBox.Tools.Pan;
+            //map.ActiveTool = SharpMap.Forms.MapBox.Tools.Pan;
 
         }
 
 
-        public void DeleteLayer(SharpMap.Layers.VectorLayer layername)
+        public void DeleteLayer(SharpMap.Layers.VectorLayer Layeritem)
         {
-            //SharpMap.Layers.VectorLayer roadmap;
-
-            map.Map.Layers.Remove(layername);
+            map.Map.Layers.RemoveAt(layerbase.IndexOf(Layeritem.LayerName));
+            layerbase.Remove(Layeritem.LayerName);
             map.Refresh();
         }
 

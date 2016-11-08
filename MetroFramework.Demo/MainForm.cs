@@ -151,16 +151,16 @@ namespace MetroFramework.Demo
         private void metroCheckBox5_CheckedChanged(object sender, EventArgs e)
         {
             string str = @"../../../map/roadway/城市次干道.shp";
-            SharpMap.Layers.VectorLayer road = new SharpMap.Layers.VectorLayer("road1");
-           
+            SharpMap.Layers.VectorLayer layer1 = new SharpMap.Layers.VectorLayer("road");
+            layer1.DataSource = new SharpMap.Data.Providers.ShapeFile(str, true);
             if (metroCheckBox5.CheckState == CheckState.Checked)
             {
-                map1.AddLayer(str,road);
+                map1.AddLayer(layer1);            
             }
             if (metroCheckBox5.CheckState==CheckState.Unchecked)           
             {
-                mapBoxTra.Map.Layers.RemoveAt(1);
-                mapBoxTra.Refresh();
+
+                map1.DeleteLayer(layer1);
             }
             
         }
@@ -176,21 +176,22 @@ namespace MetroFramework.Demo
                 layerpath = opflayer.FileName;
             }
             SharpMap.Layers.VectorLayer newlayer1 = new SharpMap.Layers.VectorLayer("newlayer1");
-            map1.AddLayer(layerpath,newlayer1);
+            map1.AddLayer(newlayer1);
         }
 
         private void metroCheckBox6_CheckedChanged(object sender, EventArgs e)
         {
             string str = @"../../../map/roadway/高速.shp";
-            SharpMap.Layers.VectorLayer gs = new SharpMap.Layers.VectorLayer("road1");
+            SharpMap.Layers.VectorLayer layer2 = new SharpMap.Layers.VectorLayer("highway");
+            layer2.DataSource = new SharpMap.Data.Providers.ShapeFile(str, true);
+
             if (metroCheckBox6.CheckState == CheckState.Checked)
             {
-                map1.AddLayer(str, gs);
+                map1.AddLayer(layer2);
             }
             if (metroCheckBox6.CheckState == CheckState.Unchecked)
             {
-                mapBoxTra.Map.Layers.RemoveAt(2);
-                mapBoxTra.Refresh();
+                map1.DeleteLayer(layer2);
             }
 
         }
@@ -203,7 +204,7 @@ namespace MetroFramework.Demo
             
             if (metroCheckBox16.CheckState == CheckState.Checked)
             {
-                map1.AddLayer(str, gd);
+                map1.AddLayer(gd);
             }
             if (metroCheckBox16.CheckState == CheckState.Unchecked)
             {

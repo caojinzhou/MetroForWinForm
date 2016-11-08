@@ -21,7 +21,7 @@ namespace MetroFramework.Demo
             InitializeComponent();
             metroStyleManager.Theme = MetroThemeStyle.Default;
             metroStyleManager.Style = MetroColorStyle.Teal;
-            map1.AddMapbox(mapBox1);
+            map1.AddMapbox(mapBox2);
 //            map1.AddLayer();
 
            

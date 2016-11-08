@@ -278,7 +278,7 @@ namespace MetroFramework.Demo
             this.basemap1.TabIndex = 3;
             this.basemap1.Text = "底图";
             this.basemap1.UseSelectable = true;
-            this.basemap1.CheckedChanged += new System.EventHandler(this.basemap1_CheckedChanged);
+            //this.basemap1.CheckedChanged += new System.EventHandler(this.basemap1_CheckedChanged);
             // 
             // metroCheckBox6
             // 
@@ -340,7 +340,7 @@ namespace MetroFramework.Demo
             this.button3.TabIndex = 37;
             this.button3.Text = "开始";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            //this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label2
             // 

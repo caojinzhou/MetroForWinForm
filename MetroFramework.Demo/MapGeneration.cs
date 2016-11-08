@@ -9,25 +9,20 @@ namespace MetroFramework.Demo
 {
     class MapGeneration
     {
-        private SharpMap.Forms.MapBox mapBox1;
+        private SharpMap.Forms.MapBox map;
 
         public MapGeneration()
         {
 
         }
 
-        public void AddMapbox(SharpMap.Forms.MapBox mapBox1)
+        public void AddMapbox(SharpMap.Forms.MapBox map)
         {
-            this.mapBox1 = mapBox1;
-            mapBox1.Refresh();
-            SharpMap.Layers.VectorLayer vlay = new SharpMap.Layers.VectorLayer("States");
-            vlay.DataSource = new SharpMap.Data.Providers.ShapeFile(@"../../../map/SZ_DISTR/SZ_DISTR.shp", true);
+            this.map = map;
+            map.Refresh();
+            SharpMap.Layers.VectorLayer baselayer = new SharpMap.Layers.VectorLayer("States");
+            baselayer.DataSource = new SharpMap.Data.Providers.ShapeFile(@"../../../map/SZ_DISTR/SZ_DISTR.shp", true);
 
-            SharpMap.Layers.VectorLayer vlay1 = new SharpMap.Layers.VectorLayer("States");
-            vlay1.DataSource = new SharpMap.Data.Providers.ShapeFile(@"../../../map/roadway/城市次干道.shp", true);
-
-            SharpMap.Layers.VectorLayer vlay2 = new SharpMap.Layers.VectorLayer("States");
-            vlay1.DataSource = new SharpMap.Data.Providers.ShapeFile(@"../../../map/roadway/高速.shp", true);
 
             //构造土地样式
             VectorStyle style1 = new VectorStyle();
@@ -44,8 +39,8 @@ namespace MetroFramework.Demo
 
             //创建地图
             Dictionary<string, SharpMap.Styles.IStyle> styles = new Dictionary<string, IStyle>();
-            styles.Add("罗湖区", style1);
-            styles.Add("福田区", style2);
+            styles.Add("罗湖区", style4);
+            styles.Add("福田区", style2);      
             styles.Add("盐田区", style3);
             styles.Add("龙岗区", style4);
             styles.Add("宝安区", style4);
@@ -53,34 +48,45 @@ namespace MetroFramework.Demo
             styles.Add("南山区", style4);
 
             //分配主题
-            vlay.Theme = new SharpMap.Rendering.Thematics.UniqueValuesTheme<string>("DISTRICT", styles, style1);
-            //mapBox1.Map.Layers.Add(vlay2);
-            mapBox1.Map.Layers.Add(vlay);
-            // mapBox1.Map.Layers.Add(vlay1);
+            baselayer.Theme = new SharpMap.Rendering.Thematics.UniqueValuesTheme<string>("DISTRICT", styles, style1);
+            map.Map.Layers.Add(baselayer);
 
-            mapBox1.Map.ZoomToExtents();
-            mapBox1.Refresh();
-            mapBox1.ActiveTool = SharpMap.Forms.MapBox.Tools.Pan;
+
+            map.Map.ZoomToExtents();
+            map.Refresh();
+            map.ActiveTool = SharpMap.Forms.MapBox.Tools.Pan;
         }
 
-        public void AddLayer()
+        public void AddLayer(string str, SharpMap.Layers.VectorLayer layername)
         {
+            
+            layername = new SharpMap.Layers.VectorLayer("road");
+            layername.DataSource = new SharpMap.Data.Providers.ShapeFile(str, true);
+            VectorStyle style1 = new VectorStyle();
+            style1.Fill = new SolidBrush(Color.FromArgb(232, 232, 232));
+            Dictionary<string, SharpMap.Styles.IStyle> styles = new Dictionary<string, IStyle>();
+            layername.Theme = new SharpMap.Rendering.Thematics.UniqueValuesTheme<string>("DISTRICT", styles, style1);
+            map.Map.Layers.Add(layername);
+            map.Map.ZoomToExtents();
+            map.Refresh();
+            map.ActiveTool = SharpMap.Forms.MapBox.Tools.Pan;
 
         }
 
-        public void HideLayer()
-        {
-           // mapBox1.Map.Layers
-        }
 
-        public void DeleteLayer()
+        public void DeleteLayer(SharpMap.Layers.VectorLayer layername)
         {
+            //SharpMap.Layers.VectorLayer roadmap;
 
+            map.Map.Layers.Remove(layername);
+            map.Refresh();
         }
 
         public void AddResultLayer()
         {
-
+            SharpMap.Layers.VectorLayer vlay = new SharpMap.Layers.VectorLayer("States");
+            vlay.DataSource = new SharpMap.Data.Providers.ShapeFile(@"../../../map/SZ_DISTR/SZ_DISTR.shp", true);
+            map.Map.Layers.Add(vlay);
         }
 
     }

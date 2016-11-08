@@ -21,16 +21,17 @@ namespace MetroFramework.Demo
             InitializeComponent();
             metroStyleManager.Theme = MetroThemeStyle.Default;
             metroStyleManager.Style = MetroColorStyle.Teal;
-            map1.AddMapbox(mapBox2);
-//            map1.AddLayer();
+            map1.AddMapbox(mapBoxTra);
+            
 
-           
+
 
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-
+            basemapcheckbox.CheckState = CheckState.Checked;
+            basemapcheckbox.Enabled = false;
         }
 
 
@@ -49,28 +50,7 @@ namespace MetroFramework.Demo
 
         private void metroButton14_Click(object sender, EventArgs e)
         {
-            string time = DateTime.Now.ToString();
-            int line = 0, num = 0;
-            string zancun = "";
-            FileStream fs = File.OpenRead("D:\\DAT\\原始数据.txt");
-            StreamReader sr = new StreamReader(fs);
-            while (sr.Peek() > -1)
-            {
-                line++;
-                zancun = zancun + sr.ReadLine() + "\r\n";
-                if (line == 100)
-                {
-                    line = 0;
-                    num++;
-                    Directory.CreateDirectory("D:\\DAT\\处理结果");
-                    FileStream fs1 = new FileStream( "D:\\DAT\\处理结果" + "\\JG" + num + ".TXT", FileMode.Create, FileAccess.Write);//创建写入文件 
-                    StreamWriter sw = new StreamWriter(fs1);
-                    sw.WriteLine(zancun);//开始写入值
-                    sw.Close();
-                    zancun = "";
-                }
-            }
-           // listBox1.Items.Add(time + "：原始数据切割成" + num + "个文件！");
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -82,7 +62,7 @@ namespace MetroFramework.Demo
             if (opf.ShowDialog() == DialogResult.OK)
             {
                 lj = opf.FileName;
-                textBox1.Text = lj;
+                trainputtext.Text = lj;
             }
 
         }
@@ -94,7 +74,7 @@ namespace MetroFramework.Demo
             if (fbd.ShowDialog() == DialogResult.OK)
             {
                 lj = fbd.SelectedPath;
-                textBox2.Text = lj;
+                traoutputtext.Text = lj;
             }
         }
 
@@ -148,36 +128,88 @@ namespace MetroFramework.Demo
             metroTabControl1.SelectedIndex = 4;
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void trainputbt_Click_1(object sender, EventArgs e)
         {
             OpenFileDialog opf = new OpenFileDialog();
             opf.InitialDirectory = "C:\\";
             opf.Filter = "文本文件(*.txt)|*.txt";
             if (opf.ShowDialog() == DialogResult.OK)
             {
-                 textBox1.Text = opf.FileName;
+                 trainputtext.Text = opf.FileName;
             }
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
+        private void traoutputbt_Click_1(object sender, EventArgs e)
         {
             FolderBrowserDialog fbd = new FolderBrowserDialog();
             if (fbd.ShowDialog() == DialogResult.OK)
             {
-                textBox2.Text = fbd.SelectedPath;
+                traoutputtext.Text = fbd.SelectedPath;
             }
         }
 
-        private void button22_Click(object sender, EventArgs e)
+        private void metroCheckBox5_CheckedChanged(object sender, EventArgs e)
         {
+            string str = @"../../../map/roadway/城市次干道.shp";
+            SharpMap.Layers.VectorLayer road = new SharpMap.Layers.VectorLayer("road1");
+           
+            if (metroCheckBox5.CheckState == CheckState.Checked)
+            {
+                map1.AddLayer(str,road);
+            }
+            if (metroCheckBox5.CheckState==CheckState.Unchecked)           
+            {
+                mapBoxTra.Map.Layers.RemoveAt(1);
+                mapBoxTra.Refresh();
+            }
+            
+        }
+
+        private void button27_Click(object sender, EventArgs e)
+        {
+            string layerpath = "";
+            OpenFileDialog opflayer = new OpenFileDialog();
+            opflayer.InitialDirectory = "C:\\";
+            opflayer.Filter = "文件(*.shp)|*.shp";
+            if (opflayer.ShowDialog() == DialogResult.OK)
+            {
+                layerpath = opflayer.FileName;
+            }
+            SharpMap.Layers.VectorLayer newlayer1 = new SharpMap.Layers.VectorLayer("newlayer1");
+            map1.AddLayer(layerpath,newlayer1);
+        }
+
+        private void metroCheckBox6_CheckedChanged(object sender, EventArgs e)
+        {
+            string str = @"../../../map/roadway/高速.shp";
+            SharpMap.Layers.VectorLayer gs = new SharpMap.Layers.VectorLayer("road1");
+            if (metroCheckBox6.CheckState == CheckState.Checked)
+            {
+                map1.AddLayer(str, gs);
+            }
+            if (metroCheckBox6.CheckState == CheckState.Unchecked)
+            {
+                mapBoxTra.Map.Layers.RemoveAt(2);
+                mapBoxTra.Refresh();
+            }
 
         }
-        //private void updateprogress() //labei3显示进度百分比
-        //{
-        //    //metroProgressBar3.PerformStep();
-        //    //label2.Text = Math.Round(((double)(metroProgressBar3.Value - metroProgressBar3.Minimum) / 
-        //    //    (double)(metroProgressBar3.Maximum - metroProgressBar3.Minimum)) * 100.0).ToString() + "%";
 
-        //}
+        private void metroCheckBox16_CheckedChanged(object sender, EventArgs e)
+        {
+            string str = @"../../../map/roadway/国道.shp";
+            SharpMap.Layers.VectorLayer gd = new SharpMap.Layers.VectorLayer("road1");
+           
+            
+            if (metroCheckBox16.CheckState == CheckState.Checked)
+            {
+                map1.AddLayer(str, gd);
+            }
+            if (metroCheckBox16.CheckState == CheckState.Unchecked)
+            {
+                mapBoxTra.Map.Layers.RemoveAt(3);
+                mapBoxTra.Refresh();
+            }
+        }
     }
 }

@@ -43,12 +43,12 @@ namespace MetroFramework.Demo
             this.metroLabel18 = new MetroFramework.Controls.MetroLabel();
             this.metroProgressBar1 = new MetroFramework.Controls.MetroProgressBar();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.button27 = new System.Windows.Forms.Button();
-            this.metroCheckBox17 = new MetroFramework.Controls.MetroCheckBox();
-            this.metroCheckBox16 = new MetroFramework.Controls.MetroCheckBox();
+            this.addlayerbt = new System.Windows.Forms.Button();
+            this.tralayercb3 = new MetroFramework.Controls.MetroCheckBox();
+            this.tralayercb2 = new MetroFramework.Controls.MetroCheckBox();
             this.basemapcheckbox = new MetroFramework.Controls.MetroCheckBox();
-            this.metroCheckBox6 = new MetroFramework.Controls.MetroCheckBox();
-            this.metroCheckBox5 = new MetroFramework.Controls.MetroCheckBox();
+            this.tralayercb1 = new MetroFramework.Controls.MetroCheckBox();
+            this.tralayerResultcb = new MetroFramework.Controls.MetroCheckBox();
             this.tranext = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
@@ -275,7 +275,7 @@ namespace MetroFramework.Demo
             this.mapBoxTra.ActiveTool = SharpMap.Forms.MapBox.Tools.None;
             this.mapBoxTra.Cursor = System.Windows.Forms.Cursors.Default;
             this.mapBoxTra.FineZoomFactor = 10D;
-            this.mapBoxTra.Location = new System.Drawing.Point(4, 2);
+            this.mapBoxTra.Location = new System.Drawing.Point(2, 2);
             this.mapBoxTra.MapQueryMode = SharpMap.Forms.MapBox.MapQueryType.LayerByIndex;
             this.mapBoxTra.Name = "mapBoxTra";
             this.mapBoxTra.QueryGrowFactor = 5F;
@@ -330,50 +330,51 @@ namespace MetroFramework.Demo
             // groupBox11
             // 
             this.groupBox11.BackColor = System.Drawing.SystemColors.Window;
-            this.groupBox11.Controls.Add(this.button27);
-            this.groupBox11.Controls.Add(this.metroCheckBox17);
-            this.groupBox11.Controls.Add(this.metroCheckBox16);
+            this.groupBox11.Controls.Add(this.addlayerbt);
+            this.groupBox11.Controls.Add(this.tralayercb3);
+            this.groupBox11.Controls.Add(this.tralayercb2);
             this.groupBox11.Controls.Add(this.basemapcheckbox);
-            this.groupBox11.Controls.Add(this.metroCheckBox6);
-            this.groupBox11.Controls.Add(this.metroCheckBox5);
+            this.groupBox11.Controls.Add(this.tralayercb1);
+            this.groupBox11.Controls.Add(this.tralayerResultcb);
             this.groupBox11.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox11.Location = new System.Drawing.Point(0, 240);
+            this.groupBox11.Location = new System.Drawing.Point(0, 222);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(166, 270);
+            this.groupBox11.Size = new System.Drawing.Size(166, 288);
             this.groupBox11.TabIndex = 26;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "图层操作";
             // 
-            // button27
+            // addlayerbt
             // 
-            this.button27.Location = new System.Drawing.Point(19, 227);
-            this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(75, 23);
-            this.button27.TabIndex = 6;
-            this.button27.Text = "添加图层";
-            this.button27.UseVisualStyleBackColor = true;
-            this.button27.Click += new System.EventHandler(this.button27_Click);
+            this.addlayerbt.Location = new System.Drawing.Point(19, 226);
+            this.addlayerbt.Name = "addlayerbt";
+            this.addlayerbt.Size = new System.Drawing.Size(75, 23);
+            this.addlayerbt.TabIndex = 6;
+            this.addlayerbt.Text = "添加图层";
+            this.addlayerbt.UseVisualStyleBackColor = true;
+            this.addlayerbt.Click += new System.EventHandler(this.addlayerbt_Click);
             // 
-            // metroCheckBox17
+            // tralayercb3
             // 
-            this.metroCheckBox17.AutoSize = true;
-            this.metroCheckBox17.Location = new System.Drawing.Point(19, 191);
-            this.metroCheckBox17.Name = "metroCheckBox17";
-            this.metroCheckBox17.Size = new System.Drawing.Size(60, 17);
-            this.metroCheckBox17.TabIndex = 5;
-            this.metroCheckBox17.Text = "添加三";
-            this.metroCheckBox17.UseSelectable = true;
+            this.tralayercb3.AutoSize = true;
+            this.tralayercb3.Location = new System.Drawing.Point(19, 191);
+            this.tralayercb3.Name = "tralayercb3";
+            this.tralayercb3.Size = new System.Drawing.Size(60, 17);
+            this.tralayercb3.TabIndex = 5;
+            this.tralayercb3.Text = "添加三";
+            this.tralayercb3.UseSelectable = true;
+            this.tralayercb3.CheckedChanged += new System.EventHandler(this.tralayercb3_CheckedChanged);
             // 
-            // metroCheckBox16
+            // tralayercb2
             // 
-            this.metroCheckBox16.AutoSize = true;
-            this.metroCheckBox16.Location = new System.Drawing.Point(19, 153);
-            this.metroCheckBox16.Name = "metroCheckBox16";
-            this.metroCheckBox16.Size = new System.Drawing.Size(60, 17);
-            this.metroCheckBox16.TabIndex = 4;
-            this.metroCheckBox16.Text = "添加二";
-            this.metroCheckBox16.UseSelectable = true;
-            this.metroCheckBox16.CheckedChanged += new System.EventHandler(this.metroCheckBox16_CheckedChanged);
+            this.tralayercb2.AutoSize = true;
+            this.tralayercb2.Location = new System.Drawing.Point(19, 153);
+            this.tralayercb2.Name = "tralayercb2";
+            this.tralayercb2.Size = new System.Drawing.Size(60, 17);
+            this.tralayercb2.TabIndex = 4;
+            this.tralayercb2.Text = "添加二";
+            this.tralayercb2.UseSelectable = true;
+            this.tralayercb2.CheckedChanged += new System.EventHandler(this.tralayercb2_CheckedChanged);
             // 
             // basemapcheckbox
             // 
@@ -384,28 +385,29 @@ namespace MetroFramework.Demo
             this.basemapcheckbox.TabIndex = 3;
             this.basemapcheckbox.Text = "底图";
             this.basemapcheckbox.UseSelectable = true;
+            this.basemapcheckbox.CheckedChanged += new System.EventHandler(this.basemapcheckbox_CheckedChanged);
             // 
-            // metroCheckBox6
+            // tralayercb1
             // 
-            this.metroCheckBox6.AutoSize = true;
-            this.metroCheckBox6.Location = new System.Drawing.Point(19, 111);
-            this.metroCheckBox6.Name = "metroCheckBox6";
-            this.metroCheckBox6.Size = new System.Drawing.Size(60, 17);
-            this.metroCheckBox6.TabIndex = 2;
-            this.metroCheckBox6.Text = "添加一";
-            this.metroCheckBox6.UseSelectable = true;
-            this.metroCheckBox6.CheckedChanged += new System.EventHandler(this.metroCheckBox6_CheckedChanged);
+            this.tralayercb1.AutoSize = true;
+            this.tralayercb1.Location = new System.Drawing.Point(19, 111);
+            this.tralayercb1.Name = "tralayercb1";
+            this.tralayercb1.Size = new System.Drawing.Size(60, 17);
+            this.tralayercb1.TabIndex = 2;
+            this.tralayercb1.Text = "添加一";
+            this.tralayercb1.UseSelectable = true;
+            this.tralayercb1.CheckedChanged += new System.EventHandler(this.tralayercb1_CheckedChanged);
             // 
-            // metroCheckBox5
+            // tralayerResultcb
             // 
-            this.metroCheckBox5.AutoSize = true;
-            this.metroCheckBox5.Location = new System.Drawing.Point(19, 74);
-            this.metroCheckBox5.Name = "metroCheckBox5";
-            this.metroCheckBox5.Size = new System.Drawing.Size(72, 17);
-            this.metroCheckBox5.TabIndex = 1;
-            this.metroCheckBox5.Text = "图层测试";
-            this.metroCheckBox5.UseSelectable = true;
-            this.metroCheckBox5.CheckedChanged += new System.EventHandler(this.metroCheckBox5_CheckedChanged);
+            this.tralayerResultcb.AutoSize = true;
+            this.tralayerResultcb.Location = new System.Drawing.Point(19, 74);
+            this.tralayerResultcb.Name = "tralayerResultcb";
+            this.tralayerResultcb.Size = new System.Drawing.Size(72, 17);
+            this.tralayerResultcb.TabIndex = 1;
+            this.tralayerResultcb.Text = "图层测试";
+            this.tralayerResultcb.UseSelectable = true;
+            this.tralayerResultcb.CheckedChanged += new System.EventHandler(this.tralayerResultcb_CheckedChanged);
             // 
             // tranext
             // 
@@ -416,7 +418,6 @@ namespace MetroFramework.Demo
             this.tranext.TabIndex = 25;
             this.tranext.Text = "下一步";
             this.tranext.UseVisualStyleBackColor = true;
-            this.tranext.Click += new System.EventHandler(this.button4_Click);
             // 
             // groupBox3
             // 
@@ -433,7 +434,7 @@ namespace MetroFramework.Demo
             this.groupBox3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox3.Location = new System.Drawing.Point(0, 7);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(166, 227);
+            this.groupBox3.Size = new System.Drawing.Size(166, 209);
             this.groupBox3.TabIndex = 24;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "路径与参数";
@@ -450,7 +451,7 @@ namespace MetroFramework.Demo
             // 
             // trapatext2
             // 
-            this.trapatext2.Location = new System.Drawing.Point(69, 189);
+            this.trapatext2.Location = new System.Drawing.Point(69, 160);
             this.trapatext2.Name = "trapatext2";
             this.trapatext2.Size = new System.Drawing.Size(82, 23);
             this.trapatext2.TabIndex = 38;
@@ -458,7 +459,7 @@ namespace MetroFramework.Demo
             // trapala2
             // 
             this.trapala2.AutoSize = true;
-            this.trapala2.Location = new System.Drawing.Point(16, 195);
+            this.trapala2.Location = new System.Drawing.Point(16, 166);
             this.trapala2.Name = "trapala2";
             this.trapala2.Size = new System.Drawing.Size(44, 17);
             this.trapala2.TabIndex = 35;
@@ -466,7 +467,7 @@ namespace MetroFramework.Demo
             // 
             // trapatext1
             // 
-            this.trapatext1.Location = new System.Drawing.Point(69, 146);
+            this.trapatext1.Location = new System.Drawing.Point(69, 117);
             this.trapatext1.Name = "trapatext1";
             this.trapatext1.Size = new System.Drawing.Size(82, 23);
             this.trapatext1.TabIndex = 36;
@@ -474,7 +475,7 @@ namespace MetroFramework.Demo
             // trapalb1
             // 
             this.trapalb1.AutoSize = true;
-            this.trapalb1.Location = new System.Drawing.Point(16, 149);
+            this.trapalb1.Location = new System.Drawing.Point(16, 120);
             this.trapalb1.Name = "trapalb1";
             this.trapalb1.Size = new System.Drawing.Size(44, 17);
             this.trapalb1.TabIndex = 37;
@@ -482,9 +483,9 @@ namespace MetroFramework.Demo
             // 
             // trainputbt
             // 
-            this.trainputbt.Location = new System.Drawing.Point(6, 89);
+            this.trainputbt.Location = new System.Drawing.Point(19, 35);
             this.trainputbt.Name = "trainputbt";
-            this.trainputbt.Size = new System.Drawing.Size(54, 23);
+            this.trainputbt.Size = new System.Drawing.Size(41, 23);
             this.trainputbt.TabIndex = 29;
             this.trainputbt.Text = "输入";
             this.trainputbt.UseVisualStyleBackColor = true;
@@ -492,9 +493,9 @@ namespace MetroFramework.Demo
             // 
             // traoutputbt
             // 
-            this.traoutputbt.Location = new System.Drawing.Point(6, 40);
+            this.traoutputbt.Location = new System.Drawing.Point(19, 74);
             this.traoutputbt.Name = "traoutputbt";
-            this.traoutputbt.Size = new System.Drawing.Size(54, 23);
+            this.traoutputbt.Size = new System.Drawing.Size(41, 23);
             this.traoutputbt.TabIndex = 31;
             this.traoutputbt.Text = "输出";
             this.traoutputbt.UseVisualStyleBackColor = true;
@@ -502,14 +503,14 @@ namespace MetroFramework.Demo
             // 
             // trainputtext
             // 
-            this.trainputtext.Location = new System.Drawing.Point(69, 89);
+            this.trainputtext.Location = new System.Drawing.Point(69, 35);
             this.trainputtext.Name = "trainputtext";
             this.trainputtext.Size = new System.Drawing.Size(82, 23);
             this.trainputtext.TabIndex = 30;
             // 
             // traoutputtext
             // 
-            this.traoutputtext.Location = new System.Drawing.Point(69, 40);
+            this.traoutputtext.Location = new System.Drawing.Point(69, 74);
             this.traoutputtext.Name = "traoutputtext";
             this.traoutputtext.Size = new System.Drawing.Size(82, 23);
             this.traoutputtext.TabIndex = 32;
@@ -1832,11 +1833,11 @@ namespace MetroFramework.Demo
         private MetroLabel metroLabel18;
         private MetroProgressBar metroProgressBar1;
         private System.Windows.Forms.GroupBox groupBox11;
-        private MetroCheckBox metroCheckBox17;
-        private MetroCheckBox metroCheckBox16;
+        private MetroCheckBox tralayercb3;
+        private MetroCheckBox tralayercb2;
         private MetroCheckBox basemapcheckbox;
-        private MetroCheckBox metroCheckBox6;
-        private MetroCheckBox metroCheckBox5;
+        private MetroCheckBox tralayercb1;
+        private MetroCheckBox tralayerResultcb;
         private System.Windows.Forms.Button tranext;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button trainputbt;
@@ -1884,7 +1885,7 @@ namespace MetroFramework.Demo
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.TabPage tabPage5;
         private SharpMap.Forms.MapBox mapBox2;
-        private System.Windows.Forms.Button button27;
+        private System.Windows.Forms.Button addlayerbt;
     }
 }
 

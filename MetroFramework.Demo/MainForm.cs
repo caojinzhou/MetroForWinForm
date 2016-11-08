@@ -22,10 +22,6 @@ namespace MetroFramework.Demo
             metroStyleManager.Theme = MetroThemeStyle.Default;
             metroStyleManager.Style = MetroColorStyle.Teal;
             map1.AddMapbox(mapBoxTra);
-            
-
-
-
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -34,13 +30,6 @@ namespace MetroFramework.Demo
             basemapcheckbox.Enabled = false;
         }
 
-
-        private void 窗体主题ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var m = new Random();
-            int next = m.Next(0, 13);
-            metroStyleManager.Style = (MetroColorStyle)next;
-        }
 
         private void metroButton13_Click(object sender, EventArgs e)
         {
@@ -53,30 +42,6 @@ namespace MetroFramework.Demo
            
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            string lj = "";
-            OpenFileDialog opf = new OpenFileDialog();
-            opf.InitialDirectory = "C:\\";
-            opf.Filter = "文本文件(*.txt)|*.txt";
-            if (opf.ShowDialog() == DialogResult.OK)
-            {
-                lj = opf.FileName;
-                trainputtext.Text = lj;
-            }
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            string lj = "";
-            FolderBrowserDialog fbd = new FolderBrowserDialog();
-            if (fbd.ShowDialog() == DialogResult.OK)
-            {
-                lj = fbd.SelectedPath;
-                traoutputtext.Text = lj;
-            }
-        }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
@@ -148,24 +113,9 @@ namespace MetroFramework.Demo
             }
         }
 
-        private void metroCheckBox5_CheckedChanged(object sender, EventArgs e)
-        {
-            string str = @"../../../map/roadway/城市次干道.shp";
-            SharpMap.Layers.VectorLayer road = new SharpMap.Layers.VectorLayer("road1");
-           
-            if (metroCheckBox5.CheckState == CheckState.Checked)
-            {
-                map1.AddLayer(str,road);
-            }
-            if (metroCheckBox5.CheckState==CheckState.Unchecked)           
-            {
-                mapBoxTra.Map.Layers.RemoveAt(1);
-                mapBoxTra.Refresh();
-            }
-            
-        }
+      
 
-        private void button27_Click(object sender, EventArgs e)
+        private void addlayerbt_Click(object sender, EventArgs e)
         {
             string layerpath = "";
             OpenFileDialog opflayer = new OpenFileDialog();
@@ -179,37 +129,43 @@ namespace MetroFramework.Demo
             map1.AddLayer(layerpath,newlayer1);
         }
 
-        private void metroCheckBox6_CheckedChanged(object sender, EventArgs e)
+     
+
+       
+
+        private void tralayerResultcb_CheckedChanged(object sender, EventArgs e)
         {
-            string str = @"../../../map/roadway/高速.shp";
-            SharpMap.Layers.VectorLayer gs = new SharpMap.Layers.VectorLayer("road1");
-            if (metroCheckBox6.CheckState == CheckState.Checked)
+
+        }
+
+        private void tralayercb1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void tralayercb2_CheckedChanged(object sender, EventArgs e)
+        {
+            string str = @"../../../map/roadway/城市次干道.shp";
+            SharpMap.Layers.VectorLayer road = new SharpMap.Layers.VectorLayer("road1");
+            //road.LayerName.IndexOf();
+            if (tralayerResultcb.CheckState == CheckState.Checked)
             {
-                map1.AddLayer(str, gs);
+                map1.AddLayer(str, road);
             }
-            if (metroCheckBox6.CheckState == CheckState.Unchecked)
+            if (tralayerResultcb.CheckState == CheckState.Unchecked)
             {
-                mapBoxTra.Map.Layers.RemoveAt(2);
+                mapBoxTra.Map.Layers.RemoveAt(1);
                 mapBoxTra.Refresh();
             }
 
         }
-
-        private void metroCheckBox16_CheckedChanged(object sender, EventArgs e)
+        private void tralayercb3_CheckedChanged(object sender, EventArgs e)
         {
-            string str = @"../../../map/roadway/国道.shp";
-            SharpMap.Layers.VectorLayer gd = new SharpMap.Layers.VectorLayer("road1");
-           
-            
-            if (metroCheckBox16.CheckState == CheckState.Checked)
-            {
-                map1.AddLayer(str, gd);
-            }
-            if (metroCheckBox16.CheckState == CheckState.Unchecked)
-            {
-                mapBoxTra.Map.Layers.RemoveAt(3);
-                mapBoxTra.Refresh();
-            }
+
+        }
+
+        private void basemapcheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

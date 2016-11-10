@@ -42,7 +42,7 @@ namespace MetroFramework.Demo
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.metroLabel18 = new MetroFramework.Controls.MetroLabel();
             this.metroProgressBar1 = new MetroFramework.Controls.MetroProgressBar();
-            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.tralayerbox = new System.Windows.Forms.GroupBox();
             this.addlayerbt = new System.Windows.Forms.Button();
             this.tralayercb3 = new MetroFramework.Controls.MetroCheckBox();
             this.tralayercb2 = new MetroFramework.Controls.MetroCheckBox();
@@ -147,15 +147,7 @@ namespace MetroFramework.Demo
             this.button20 = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
             this.metroStyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
-            this.metroToolTip = new MetroFramework.Components.MetroToolTip();
             this.metroStyleExtender = new MetroFramework.Components.MetroStyleExtender(this.components);
-            this.metroContextMenu1 = new MetroFramework.Controls.MetroContextMenu(this.components);
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.maintenanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.metroProgressBar6 = new MetroFramework.Controls.MetroProgressBar();
@@ -177,12 +169,15 @@ namespace MetroFramework.Demo
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.mapBox2 = new SharpMap.Forms.MapBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.metroContextMenu1 = new MetroFramework.Controls.MetroContextMenu(this.components);
+            this.删除该图层ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.metroTabControl1.SuspendLayout();
             this.traTabPage.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox12.SuspendLayout();
-            this.groupBox11.SuspendLayout();
+            this.tralayerbox.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.stopptTabPage.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -233,7 +228,7 @@ namespace MetroFramework.Demo
             // 
             this.traTabPage.Controls.Add(this.tabControl1);
             this.traTabPage.Controls.Add(this.groupBox12);
-            this.traTabPage.Controls.Add(this.groupBox11);
+            this.traTabPage.Controls.Add(this.tralayerbox);
             this.traTabPage.Controls.Add(this.tranext);
             this.traTabPage.Controls.Add(this.groupBox3);
             this.traTabPage.Controls.Add(this.tracancel);
@@ -327,22 +322,22 @@ namespace MetroFramework.Demo
             this.metroProgressBar1.TabIndex = 34;
             this.metroProgressBar1.Value = 20;
             // 
-            // groupBox11
+            // tralayerbox
             // 
-            this.groupBox11.BackColor = System.Drawing.SystemColors.Window;
-            this.groupBox11.Controls.Add(this.addlayerbt);
-            this.groupBox11.Controls.Add(this.tralayercb3);
-            this.groupBox11.Controls.Add(this.tralayercb2);
-            this.groupBox11.Controls.Add(this.basemapcheckbox);
-            this.groupBox11.Controls.Add(this.tralayercb1);
-            this.groupBox11.Controls.Add(this.tralayerResultcb);
-            this.groupBox11.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox11.Location = new System.Drawing.Point(0, 222);
-            this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(166, 288);
-            this.groupBox11.TabIndex = 26;
-            this.groupBox11.TabStop = false;
-            this.groupBox11.Text = "图层操作";
+            this.tralayerbox.BackColor = System.Drawing.SystemColors.Window;
+            this.tralayerbox.Controls.Add(this.addlayerbt);
+            this.tralayerbox.Controls.Add(this.tralayercb3);
+            this.tralayerbox.Controls.Add(this.tralayercb2);
+            this.tralayerbox.Controls.Add(this.basemapcheckbox);
+            this.tralayerbox.Controls.Add(this.tralayercb1);
+            this.tralayerbox.Controls.Add(this.tralayerResultcb);
+            this.tralayerbox.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tralayerbox.Location = new System.Drawing.Point(0, 222);
+            this.tralayerbox.Name = "tralayerbox";
+            this.tralayerbox.Size = new System.Drawing.Size(166, 288);
+            this.tralayerbox.TabIndex = 26;
+            this.tralayerbox.TabStop = false;
+            this.tralayerbox.Text = "图层操作";
             // 
             // addlayerbt
             // 
@@ -351,30 +346,39 @@ namespace MetroFramework.Demo
             this.addlayerbt.Size = new System.Drawing.Size(75, 23);
             this.addlayerbt.TabIndex = 6;
             this.addlayerbt.Text = "添加图层";
+            this.toolTip1.SetToolTip(this.addlayerbt, "点击右键删除图层");
             this.addlayerbt.UseVisualStyleBackColor = true;
             this.addlayerbt.Click += new System.EventHandler(this.addlayerbt_Click);
             // 
             // tralayercb3
             // 
             this.tralayercb3.AutoSize = true;
-            this.tralayercb3.Location = new System.Drawing.Point(19, 191);
+            this.tralayercb3.Checked = true;
+            this.tralayercb3.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.tralayercb3.Location = new System.Drawing.Point(48, 192);
             this.tralayercb3.Name = "tralayercb3";
             this.tralayercb3.Size = new System.Drawing.Size(60, 17);
             this.tralayercb3.TabIndex = 5;
             this.tralayercb3.Text = "添加三";
+            this.toolTip1.SetToolTip(this.tralayercb3, "点击右键删除图层");
             this.tralayercb3.UseSelectable = true;
             this.tralayercb3.CheckedChanged += new System.EventHandler(this.tralayercb3_CheckedChanged);
+            this.tralayercb3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.deletlayer_MouseDown);
             // 
             // tralayercb2
             // 
             this.tralayercb2.AutoSize = true;
-            this.tralayercb2.Location = new System.Drawing.Point(19, 153);
+            this.tralayercb2.Checked = true;
+            this.tralayercb2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.tralayercb2.Location = new System.Drawing.Point(48, 153);
             this.tralayercb2.Name = "tralayercb2";
             this.tralayercb2.Size = new System.Drawing.Size(60, 17);
             this.tralayercb2.TabIndex = 4;
             this.tralayercb2.Text = "添加二";
+            this.toolTip1.SetToolTip(this.tralayercb2, "点击右键删除图层");
             this.tralayercb2.UseSelectable = true;
             this.tralayercb2.CheckedChanged += new System.EventHandler(this.tralayercb2_CheckedChanged);
+            this.tralayercb2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.deletlayer_MouseDown);
             // 
             // basemapcheckbox
             // 
@@ -385,18 +389,21 @@ namespace MetroFramework.Demo
             this.basemapcheckbox.TabIndex = 3;
             this.basemapcheckbox.Text = "底图";
             this.basemapcheckbox.UseSelectable = true;
-            this.basemapcheckbox.CheckedChanged += new System.EventHandler(this.basemapcheckbox_CheckedChanged);
             // 
             // tralayercb1
             // 
             this.tralayercb1.AutoSize = true;
-            this.tralayercb1.Location = new System.Drawing.Point(19, 111);
+            this.tralayercb1.Checked = true;
+            this.tralayercb1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.tralayercb1.Location = new System.Drawing.Point(48, 116);
             this.tralayercb1.Name = "tralayercb1";
             this.tralayercb1.Size = new System.Drawing.Size(60, 17);
             this.tralayercb1.TabIndex = 2;
             this.tralayercb1.Text = "添加一";
+            this.toolTip1.SetToolTip(this.tralayercb1, "点击右键删除图层");
             this.tralayercb1.UseSelectable = true;
             this.tralayercb1.CheckedChanged += new System.EventHandler(this.tralayercb1_CheckedChanged);
+            this.tralayercb1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.deletlayer_MouseDown);
             // 
             // tralayerResultcb
             // 
@@ -405,7 +412,7 @@ namespace MetroFramework.Demo
             this.tralayerResultcb.Name = "tralayerResultcb";
             this.tralayerResultcb.Size = new System.Drawing.Size(72, 17);
             this.tralayerResultcb.TabIndex = 1;
-            this.tralayerResultcb.Text = "图层测试";
+            this.tralayerResultcb.Text = "结果图层";
             this.tralayerResultcb.UseSelectable = true;
             this.tralayerResultcb.CheckedChanged += new System.EventHandler(this.tralayerResultcb_CheckedChanged);
             // 
@@ -518,12 +525,13 @@ namespace MetroFramework.Demo
             // tracancel
             // 
             this.tracancel.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tracancel.Location = new System.Drawing.Point(513, 582);
+            this.tracancel.Location = new System.Drawing.Point(501, 579);
             this.tracancel.Name = "tracancel";
             this.tracancel.Size = new System.Drawing.Size(75, 23);
             this.tracancel.TabIndex = 23;
             this.tracancel.Text = "取消";
             this.tracancel.UseVisualStyleBackColor = true;
+            this.tracancel.Click += new System.EventHandler(this.tracancel_Click);
             // 
             // stopptTabPage
             // 
@@ -1439,59 +1447,6 @@ namespace MetroFramework.Demo
             this.metroStyleManager.Owner = this;
             this.metroStyleManager.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // metroToolTip
-            // 
-            this.metroToolTip.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroToolTip.StyleManager = null;
-            this.metroToolTip.Theme = MetroFramework.MetroThemeStyle.Light;
-            // 
-            // metroContextMenu1
-            // 
-            this.metroContextMenu1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.maintenanceToolStripMenuItem,
-            this.toolsToolStripMenuItem,
-            this.settingsToolStripMenuItem,
-            this.toolStripMenuItem1,
-            this.exitToolStripMenuItem});
-            this.metroContextMenu1.Name = "metroContextMenu1";
-            this.metroContextMenu1.Size = new System.Drawing.Size(151, 120);
-            // 
-            // fileToolStripMenuItem
-            // 
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.fileToolStripMenuItem.Text = "&File";
-            // 
-            // maintenanceToolStripMenuItem
-            // 
-            this.maintenanceToolStripMenuItem.Name = "maintenanceToolStripMenuItem";
-            this.maintenanceToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.maintenanceToolStripMenuItem.Text = "&Maintenance";
-            // 
-            // toolsToolStripMenuItem
-            // 
-            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.toolsToolStripMenuItem.Text = "&Tools";
-            // 
-            // settingsToolStripMenuItem
-            // 
-            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.settingsToolStripMenuItem.Text = "&Settings";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(147, 6);
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.exitToolStripMenuItem.Text = "E&xit";
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
@@ -1672,6 +1627,20 @@ namespace MetroFramework.Demo
             this.mapBox2.TabIndex = 0;
             this.mapBox2.WheelZoomMagnitude = -2D;
             // 
+            // metroContextMenu1
+            // 
+            this.metroContextMenu1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.删除该图层ToolStripMenuItem});
+            this.metroContextMenu1.Name = "metroContextMenu1";
+            this.metroContextMenu1.Size = new System.Drawing.Size(153, 48);
+            // 
+            // 删除该图层ToolStripMenuItem
+            // 
+            this.删除该图层ToolStripMenuItem.Name = "删除该图层ToolStripMenuItem";
+            this.删除该图层ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.删除该图层ToolStripMenuItem.Text = "删除该图层";
+            this.删除该图层ToolStripMenuItem.Click += new System.EventHandler(this.删除该图层ToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.ApplyImageInvert = true;
@@ -1699,8 +1668,8 @@ namespace MetroFramework.Demo
             this.tabPage1.ResumeLayout(false);
             this.groupBox12.ResumeLayout(false);
             this.groupBox12.PerformLayout();
-            this.groupBox11.ResumeLayout(false);
-            this.groupBox11.PerformLayout();
+            this.tralayerbox.ResumeLayout(false);
+            this.tralayerbox.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.stopptTabPage.ResumeLayout(false);
@@ -1745,17 +1714,9 @@ namespace MetroFramework.Demo
         private Controls.MetroTabControl metroTabControl1;
         private Components.MetroStyleManager metroStyleManager;
         private Controls.MetroTabPage stopptTabPage;
-        private Components.MetroToolTip metroToolTip;
         private Controls.MetroTabPage actTabPage;
         private Controls.MetroTabPage travelTabPage;
         private Components.MetroStyleExtender metroStyleExtender;
-        private Controls.MetroContextMenu metroContextMenu1;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem maintenanceToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private Controls.MetroTabPage batchTabPage;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
@@ -1832,7 +1793,7 @@ namespace MetroFramework.Demo
         private System.Windows.Forms.GroupBox groupBox12;
         private MetroLabel metroLabel18;
         private MetroProgressBar metroProgressBar1;
-        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.GroupBox tralayerbox;
         private MetroCheckBox tralayercb3;
         private MetroCheckBox tralayercb2;
         private MetroCheckBox basemapcheckbox;
@@ -1886,6 +1847,9 @@ namespace MetroFramework.Demo
         private System.Windows.Forms.TabPage tabPage5;
         private SharpMap.Forms.MapBox mapBox2;
         private System.Windows.Forms.Button addlayerbt;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private MetroContextMenu metroContextMenu1;
+        private System.Windows.Forms.ToolStripMenuItem 删除该图层ToolStripMenuItem;
     }
 }
 

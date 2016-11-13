@@ -15,8 +15,13 @@ namespace MetroFramework.Demo
     public partial class MainForm : MetroForm
     {
         MapGeneration map1 = new MapGeneration();
+        //两个列表相对应索引值；
         List<SharpMap.Layers.VectorLayer> userlayer = new List<SharpMap.Layers.VectorLayer>();
         List<MetroFramework.Controls.MetroCheckBox> trausercheckbox = new List<MetroFramework.Controls.MetroCheckBox>();
+
+        //删除使用；
+        MetroFramework.Controls.MetroCheckBox cbnamezc;
+
 
         public MainForm()
         {
@@ -126,42 +131,44 @@ namespace MetroFramework.Demo
         }
 
         private void tralayercb1_CheckedChanged(object sender, EventArgs e)
-        {
-           
+        {           
             if (tralayercb1.CheckState == CheckState.Checked)
             {
-                map1.AddLayer(userlayer[0]);
+                map1.AddLayer(userlayer[trausercheckbox.IndexOf(tralayercb1)]);
             }
             if (tralayercb1.CheckState == CheckState.Unchecked)
             {
-
-                map1.DeleteLayer(userlayer[0]);
+                map1.DeleteLayer(userlayer[trausercheckbox.IndexOf(tralayercb1)]);
             }
+        }
+
+        private void traldeletlayer_MouseDown(object sender, EventArgs e)
+        {
+            metroContextMenu1.Show(MousePosition.X, MousePosition.Y);
         }
 
         private void tralayercb2_CheckedChanged(object sender, EventArgs e)
         {
-           
             if (tralayercb2.CheckState == CheckState.Checked)
             {
-                map1.AddLayer(userlayer[1]);
+                map1.AddLayer(userlayer[trausercheckbox.IndexOf(tralayercb2)]);
+
             }
             if (tralayercb2.CheckState == CheckState.Unchecked)
             {
-                map1.DeleteLayer(userlayer[1]);
+                map1.DeleteLayer(userlayer[trausercheckbox.IndexOf(tralayercb2)]);
             }
         }
 
         private void tralayercb3_CheckedChanged(object sender, EventArgs e)
         {
-            
             if (tralayercb3.CheckState == CheckState.Checked)
             {
-                map1.AddLayer(userlayer[2]);
+                map1.AddLayer(userlayer[trausercheckbox.IndexOf(tralayercb3)]);
             }
             if (tralayercb3.CheckState == CheckState.Unchecked)
             {
-                map1.DeleteLayer(userlayer[2]);
+                map1.DeleteLayer(userlayer[trausercheckbox.IndexOf(tralayercb3)]);
             }
         }
 
@@ -179,20 +186,19 @@ namespace MetroFramework.Demo
                     string path = opf.FileName;
                     layertext = System.IO.Path.GetFileNameWithoutExtension(opf.FileName);
                     tralayercb1.Visible = true;
-                    tralayercb1.CheckState = CheckState.Checked;
                     tralayercb1.Text = layertext;
                     SharpMap.Layers.VectorLayer layer3 = new SharpMap.Layers.VectorLayer("userlayer1");
                     layer3.DataSource = new SharpMap.Data.Providers.ShapeFile(path, true);
+                    //在对应列表中添加CheckBox和layer对应
                     userlayer.Add(layer3);
+                    trausercheckbox.Add(tralayercb1);
                     foreach (var item in userlayer)
                     {
                          index = userlayer.IndexOf(layer3);
                     }
-                    //int index = userlayer.IndexOf(layer3);
-                    //int index1 = userlayer.FindIndex(1);
-                    lacationchange(index, tralayercb1);
 
-                    map1.AddLayer(layer3);                    
+                    lacationchange(index, tralayercb1);
+                    tralayercb1.CheckState = CheckState.Checked;
                     path = "";
                     goto noticet;
                 }
@@ -202,19 +208,22 @@ namespace MetroFramework.Demo
                     string path = opf.FileName;
                     layertext = System.IO.Path.GetFileNameWithoutExtension(opf.FileName);
                     tralayercb2.Visible = true;
-                    tralayercb2.CheckState = CheckState.Checked;
+
                     tralayercb2.Text = layertext;
                     SharpMap.Layers.VectorLayer layer4 = new SharpMap.Layers.VectorLayer("userlayer2");
                     layer4.DataSource = new SharpMap.Data.Providers.ShapeFile(path, true);
-                    map1.AddLayer(layer4);
-                    userlayer.Add(layer4);
 
+                    //在对应列表中添加CheckBox和layer对应
+                    userlayer.Add(layer4);
+                    trausercheckbox.Add(tralayercb2);
+                    //引用位置变化的函数
                     foreach (var item in userlayer)
                     {
                         index = userlayer.IndexOf(layer4);
                     }
                     lacationchange(index, tralayercb2);
 
+                    tralayercb2.CheckState = CheckState.Checked;
                     path = "";
                     goto noticet;
                 }
@@ -223,19 +232,21 @@ namespace MetroFramework.Demo
                     int index = 0;
                     string path = opf.FileName;
                     layertext = System.IO.Path.GetFileNameWithoutExtension(opf.FileName);
-                    //addusercheckbox("trauserlayercb3", layertext, 19, 191);
                     tralayercb3.Visible = true;
-                    tralayercb3.CheckState = CheckState.Checked;
+
                     tralayercb3.Text = layertext;
                     SharpMap.Layers.VectorLayer layer5 = new SharpMap.Layers.VectorLayer("userlayer3");
-                    layer5.DataSource = new SharpMap.Data.Providers.ShapeFile(path, true); 
-                    map1.AddLayer(layer5);
+                    layer5.DataSource = new SharpMap.Data.Providers.ShapeFile(path, true);
+
+                    //在对应列表中添加CheckBox和layer对应
                     userlayer.Add(layer5);
+                    trausercheckbox.Add(tralayercb3);
                     foreach (var item in userlayer)
                     {
                         index = userlayer.IndexOf(layer5);
                     }
                     lacationchange(index, tralayercb3);
+                    tralayercb3.CheckState = CheckState.Checked;
                     path = "";
                     goto noticet;
                 }
@@ -243,14 +254,10 @@ namespace MetroFramework.Demo
                 if (tralayercb3.Visible == true)
                 {
                     MetroMessageBox.Show(this, "\n\r\n\r对不起，您最多只能添加三个图层！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    
                 }
             }
             noticet: mapBoxTra.Refresh();
-
-
         }
-
 
         private void deletlayer_MouseDown(object sender, MouseEventArgs e)
         {
@@ -258,30 +265,27 @@ namespace MetroFramework.Demo
             {
                 metroContextMenu1.Show(MousePosition.X, MousePosition.Y);
             }
-
-
-        }
-
-      
-        private void tracancel_Click(object sender, EventArgs e)
-        {
-
+            MetroFramework.Controls.MetroCheckBox cb = (MetroFramework.Controls.MetroCheckBox)sender;
+            cbnamezc = cb;
            
-            
         }
         
+        private void tracancel_Click(object sender, EventArgs e)
+        {
+            
+        }
         //添加CheckBox的函数//暂时没有用
-        public void addusercheckbox( string cbname, string cbtext, int x,int y)
+        public void addusercheckbox(string cbname, string cbtext, int x, int y)
         {
             MetroFramework.Controls.MetroCheckBox c = new MetroFramework.Controls.MetroCheckBox();
-            c.Location = new System.Drawing.Point(x,y);
+            c.Location = new System.Drawing.Point(x, y);
             c.BringToFront();
             c.Name = cbname;
             c.Text = cbtext;
             c.Checked = true;
-            this.tralayerbox.Controls.Add(c);          
+            this.tralayerbox.Controls.Add(c);
         }
-        //位置变换函数
+       //位置变换函数
         public void lacationchange(int layerindex, MetroFramework.Controls.MetroCheckBox cb )
         {
             if (layerindex == 0)
@@ -300,7 +304,30 @@ namespace MetroFramework.Demo
 
         private void 删除该图层ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            int index = trausercheckbox.IndexOf(cbnamezc);//根据右键传值找出对应的索引值；
+            if (cbnamezc.CheckState == CheckState.Checked)
+            {
+                cbnamezc.CheckState = CheckState.Unchecked;
+                userlayer.RemoveAt(index);
+                trausercheckbox.RemoveAt(index);
+                cbnamezc.Visible = false;
+                goto gun;
+            }
+            if (cbnamezc.CheckState == CheckState.Unchecked)
+            {
+                userlayer.RemoveAt(index);
+                trausercheckbox.RemoveAt(index);
+                cbnamezc.Visible = false;
+                goto gun;
+            }
+            gun: mapBoxTra.Refresh();
+            int i = 0;
+            foreach (var item in trausercheckbox)
+            {
+                lacationchange(i, item);
+                i++;
+            }
+           
         }
     }
 }

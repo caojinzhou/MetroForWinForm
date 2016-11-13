@@ -30,27 +30,29 @@ namespace MetroFramework.Demo
 
             //构造土地样式
             VectorStyle style1 = new VectorStyle();
-            style1.Fill = new SolidBrush(Color.FromArgb(232, 232, 232));
+            style1.Fill = new SolidBrush(Color.FromArgb(0, 176, 192));
 
             VectorStyle style2 = new VectorStyle();
-            style2.Fill = new SolidBrush(Color.FromArgb(255, 128, 0));
+            style2.Fill = new SolidBrush(Color.FromArgb(64, 128, 128));
 
             VectorStyle style3 = new VectorStyle();
-            style3.Fill = new SolidBrush(Color.FromArgb(204, 89, 68));
+            style3.Fill = new SolidBrush(Color.FromArgb(85, 165, 247));
 
             VectorStyle style4 = new VectorStyle();
-            style4.Fill = new SolidBrush(Color.FromArgb(86, 58, 255));
+            style4.Fill = new SolidBrush(Color.FromArgb(255, 127, 1));
 
             //创建地图
             Dictionary<string, SharpMap.Styles.IStyle> styles = new Dictionary<string, IStyle>();
-            styles.Add("罗湖区", style4);
+            styles.Add("罗湖区", style1);
             styles.Add("福田区", style2);
             styles.Add("盐田区", style3);
-            styles.Add("龙岗区", style4);
-            styles.Add("宝安区", style4);
-            styles.Add("坪山新区", style2);
-            styles.Add("南山区", style4);
-
+            styles.Add("龙岗区", style2);
+            styles.Add("宝安区", style1);
+            styles.Add("坪山新区", style4);
+            styles.Add("南山区", style3);
+            styles.Add("龙华新区", style4);
+            styles.Add("大鹏新区", style2);
+            styles.Add("光明新区", style3);
             //分配主题
             baselayer.Theme = new SharpMap.Rendering.Thematics.UniqueValuesTheme<string>("DISTRICT", styles, style1);
             map.Map.Layers.Add(baselayer);
@@ -77,6 +79,12 @@ namespace MetroFramework.Demo
             layerbase.Remove(Layeritem.LayerName);
             map.Refresh();
         }
+
+        public void HideLayer(SharpMap.Layers.VectorLayer Layeritem)
+        {
+            //map.Map.Layers.
+        }
+
         public void AddResultLayer()
         {
             SharpMap.Layers.VectorLayer vlay = new SharpMap.Layers.VectorLayer("States");
@@ -85,16 +93,6 @@ namespace MetroFramework.Demo
         }
         public void addcheckbox( )
         {
-            //MetroFramework.Controls.MetroCheckBox ch1 = new MetroFramework.Controls.MetroCheckBox();
-            //ch1.AutoSize = true;
-            //ch1.Checked = true;
-            //ch1.CheckState = System.Windows.Forms.CheckState.Checked;
-            //ch1.Location = new System.Drawing.Point(413, 582);
-            //ch1.Name = cbname;
-            //ch1.Size = new System.Drawing.Size(60, 17);
-            //ch1.TabIndex = 4;
-            //ch1.Text = cbtext;
-           
             
         }
 

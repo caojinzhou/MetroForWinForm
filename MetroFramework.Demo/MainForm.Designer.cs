@@ -353,8 +353,6 @@ namespace MetroFramework.Demo
             // tralayercb3
             // 
             this.tralayercb3.AutoSize = true;
-            this.tralayercb3.Checked = true;
-            this.tralayercb3.CheckState = System.Windows.Forms.CheckState.Checked;
             this.tralayercb3.Location = new System.Drawing.Point(48, 192);
             this.tralayercb3.Name = "tralayercb3";
             this.tralayercb3.Size = new System.Drawing.Size(60, 17);
@@ -368,8 +366,6 @@ namespace MetroFramework.Demo
             // tralayercb2
             // 
             this.tralayercb2.AutoSize = true;
-            this.tralayercb2.Checked = true;
-            this.tralayercb2.CheckState = System.Windows.Forms.CheckState.Checked;
             this.tralayercb2.Location = new System.Drawing.Point(48, 153);
             this.tralayercb2.Name = "tralayercb2";
             this.tralayercb2.Size = new System.Drawing.Size(60, 17);
@@ -393,8 +389,6 @@ namespace MetroFramework.Demo
             // tralayercb1
             // 
             this.tralayercb1.AutoSize = true;
-            this.tralayercb1.Checked = true;
-            this.tralayercb1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.tralayercb1.Location = new System.Drawing.Point(48, 116);
             this.tralayercb1.Name = "tralayercb1";
             this.tralayercb1.Size = new System.Drawing.Size(60, 17);
@@ -1632,12 +1626,12 @@ namespace MetroFramework.Demo
             this.metroContextMenu1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.删除该图层ToolStripMenuItem});
             this.metroContextMenu1.Name = "metroContextMenu1";
-            this.metroContextMenu1.Size = new System.Drawing.Size(153, 48);
+            this.metroContextMenu1.Size = new System.Drawing.Size(137, 26);
             // 
             // 删除该图层ToolStripMenuItem
             // 
             this.删除该图层ToolStripMenuItem.Name = "删除该图层ToolStripMenuItem";
-            this.删除该图层ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.删除该图层ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.删除该图层ToolStripMenuItem.Text = "删除该图层";
             this.删除该图层ToolStripMenuItem.Click += new System.EventHandler(this.删除该图层ToolStripMenuItem_Click);
             // 

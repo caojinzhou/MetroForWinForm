@@ -12,8 +12,6 @@ namespace MetroFramework.Demo
         private SharpMap.Forms.MapBox map;
         SharpMap.Layers.VectorLayer baselayer;
         List<string> layerbase;
-
-       
         public MapGeneration()
         {
 
@@ -26,20 +24,19 @@ namespace MetroFramework.Demo
             map.Refresh();
             baselayer = new SharpMap.Layers.VectorLayer("States");
             baselayer.DataSource = new SharpMap.Data.Providers.ShapeFile(@"../../../map/SZ_DISTR/SZ_DISTR.shp", true);
-
-
+            
             //构造土地样式
             VectorStyle style1 = new VectorStyle();
-            style1.Fill = new SolidBrush(Color.FromArgb(0, 176, 192));
+            style1.Fill = new SolidBrush(Color.FromArgb(176, 170, 170));
 
             VectorStyle style2 = new VectorStyle();
-            style2.Fill = new SolidBrush(Color.FromArgb(64, 128, 128));
+            style2.Fill = new SolidBrush(Color.FromArgb(153, 153, 153));
 
             VectorStyle style3 = new VectorStyle();
-            style3.Fill = new SolidBrush(Color.FromArgb(85, 165, 247));
+            style3.Fill = new SolidBrush(Color.FromArgb(192, 192, 192));
 
             VectorStyle style4 = new VectorStyle();
-            style4.Fill = new SolidBrush(Color.FromArgb(255, 127, 1));
+            style4.Fill = new SolidBrush(Color.FromArgb(204, 204, 204));
 
             //创建地图
             Dictionary<string, SharpMap.Styles.IStyle> styles = new Dictionary<string, IStyle>();
@@ -57,8 +54,7 @@ namespace MetroFramework.Demo
             baselayer.Theme = new SharpMap.Rendering.Thematics.UniqueValuesTheme<string>("DISTRICT", styles, style1);
             map.Map.Layers.Add(baselayer);
             layerbase.Add(baselayer.LayerName);
-
-
+            
             map.Map.ZoomToExtents();
             map.Refresh();
             map.ActiveTool = SharpMap.Forms.MapBox.Tools.Pan;
@@ -71,8 +67,7 @@ namespace MetroFramework.Demo
             map.Map.ZoomToExtents();
             map.Refresh();
         }
-
-
+        
         public void DeleteLayer(SharpMap.Layers.VectorLayer Layeritem)
         {
             map.Map.Layers.RemoveAt(layerbase.IndexOf(Layeritem.LayerName));

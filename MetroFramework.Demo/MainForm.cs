@@ -9,6 +9,8 @@ using SharpMap;
 using System.IO;
 using System.Text;
 using SharpMap.Styles;
+using System.Linq;
+using System.Data;
 
 namespace MetroFramework.Demo
 {
@@ -23,6 +25,39 @@ namespace MetroFramework.Demo
         MetroFramework.Controls.MetroCheckBox cbnamezc;
         //判断用户添加图层是否重复
         List<string> userlyname = new List<string>();
+        string filename;
+       
+        //定义子窗体传值类型和函数
+        List<string> DataField = new List<string>();
+        public List<string> Matchvalue 
+        {
+            get
+            {
+                return DataField;
+            }
+            set  
+            {
+                DataField = value;
+            }
+        }//传递原数据的列匹配情况
+        char fengefu;
+        public char chuandifenge
+        {
+            set
+            {
+                fengefu = value;
+            }
+        }//传递占位符类型
+        string tital;
+        public string ischoosett
+        {
+            set
+            {
+                tital = value;
+            }
+        }//传递第一行是否有有效数据
+     
+        //主程序
         public MainForm()
         {
             InitializeComponent();
@@ -38,16 +73,18 @@ namespace MetroFramework.Demo
             tra_userlayer_cb2.Visible = false;
             tra_userlayer_cb3.Visible = false;
             tra_addlayer_bt.Location = new System.Drawing.Point(9, 111);
+           
         }
 
         private void tra_input_bt_Click_1(object sender, EventArgs e)
         {
             OpenFileDialog opf = new OpenFileDialog();
-            opf.InitialDirectory = "C:\\";
+            opf.InitialDirectory = "F:\\";
             opf.Filter = "文本文件(*.txt)|*.txt";
             if (opf.ShowDialog() == DialogResult.OK)
             {
                  tra_input_tb.Text = opf.FileName;
+                 filename=System.IO.Path.GetFileNameWithoutExtension(opf.FileName);
             }
         }
 
@@ -250,7 +287,7 @@ namespace MetroFramework.Demo
                 i++;
             }
         }
-        //添加CheckBox的函数//暂时没有用
+        //添加CheckBox的函数//暂时没有用    
         public void addusercheckbox(string cbname, string cbtext, int x, int y)
         {
             MetroFramework.Controls.MetroCheckBox c = new MetroFramework.Controls.MetroCheckBox();
@@ -280,8 +317,7 @@ namespace MetroFramework.Demo
                 tra_addlayer_bt.Location = new System.Drawing.Point(9, 229);
             }
         }
-
-     
+        
         private void tra_next_bt_Click(object sender, EventArgs e)
         {
             FormTabControl.SelectedIndex = 1;
@@ -289,9 +325,94 @@ namespace MetroFramework.Demo
 
         private void tra_start_bt_Click(object sender, EventArgs e)
         {
-
+            
+            // 假设文件为 c:\data.txt
+            string path = tra_input_tb.Text;
+            //
+            if (tra_input_tb.Text == string.Empty )
+            {
+                MessageBox.Show("对不起，路径不能为空！");
+            }
+            else
+            {
+                LeadData Fm = new LeadData();//实例化一个FormS窗口
+                Fm.comevalue1 = path;//设置FormS中string1的值
+                Fm.comevalue2 = filename;
+                Fm.Owner = this;        //重要的一步，主要是使FrmS的Owner指针指向父窗体
+                Fm.SetValue();//设置子窗体显示文件名
+                Fm.ShowDialog();
+            }
         }
+        //在dataGridView1，中显示数据，在子窗体，传值时激发此函数
+        public void AddTableData()
+        {
+          
+            var path = tra_input_tb.Text;
+            DataTable dt = new DataTable();
+            dt.Columns.Add("uid", typeof(string));
+            dt.Columns.Add("time", typeof(string));
+            dt.Columns.Add("locationid", typeof(string));
+            dt.Columns.Add("lat", typeof(string));
+            dt.Columns.Add("lon", typeof(string));
 
-       
+            //读入文件  
+            StreamReader sr = new StreamReader(path, Encoding.Default);
+            string[] strArr = sr.ReadLine().Split(fengefu);
+           
+            string p1 = DataField[0];
+            if (tital  == "no")
+            {
+                List<string> YT = new List<string>();
+                for (int j = 0; j < strArr.Length; j++)
+                {
+                    YT.Add(strArr[j]);
+                }
+                for (int i = 0; i < 20; i++)
+                {
+                    string[] items = sr.ReadLine().Split(fengefu);
+                    DataRow dr = dt.NewRow();
+                    dr[0] = items[YT.IndexOf(DataField[0])];
+                    dr[1] = items[YT.IndexOf(DataField[1])];
+                    dr[2] = items[YT.IndexOf(DataField[2])];
+                    dr[3] = items[YT.IndexOf(DataField[3])];
+                    dr[4] = items[YT.IndexOf(DataField[4])];
+
+                    dt.Rows.Add(dr);
+                }
+                dataGridView1.DataSource = dt;
+                YT.Clear();
+                DataField.Clear();
+            }
+            if (tital == "yes")
+            {
+                List<string> NT = new List<string>();
+                for (int i = 1; i<6;i++)
+                {
+                    NT.Add("Field" + i);
+                }
+                for (int i = 0; i < 20; i++)
+                {
+                    string[] items = sr.ReadLine().Split(fengefu);
+                    DataRow dr = dt.NewRow();
+                    dr[0] = items[NT.IndexOf(DataField[0])];
+                    dr[1] = items[NT.IndexOf(DataField[1])];
+                    dr[2] = items[NT.IndexOf(DataField[2])];
+                    dr[3] = items[NT.IndexOf(DataField[3])];
+                    dr[4] = items[NT.IndexOf(DataField[4])];
+
+                    dt.Rows.Add(dr);
+                }
+                dataGridView1.DataSource = dt;
+                NT.Clear();
+                DataField.Clear();
+            }
+ 
+           
+        }
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+        
     }
 }

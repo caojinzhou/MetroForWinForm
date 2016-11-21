@@ -39,9 +39,13 @@ namespace MetroFramework.Demo
             this.FormTabControl = new MetroFramework.Controls.MetroTabControl();
             this.traTabPage = new MetroFramework.Controls.MetroTabPage();
             this.tra_tc = new System.Windows.Forms.TabControl();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tramap = new SharpMap.Forms.MapBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tra_Progressbar_gb = new System.Windows.Forms.GroupBox();
             this.metroLabel18 = new MetroFramework.Controls.MetroLabel();
             this.tra_Progressbar = new MetroFramework.Controls.MetroProgressBar();
@@ -176,12 +180,14 @@ namespace MetroFramework.Demo
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.metroContextMenu1 = new MetroFramework.Controls.MetroContextMenu(this.components);
             this.删除该图层ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.FormTabControl.SuspendLayout();
             this.traTabPage.SuspendLayout();
             this.tra_tc.SuspendLayout();
+            this.tabPage7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.tra_Progressbar_gb.SuspendLayout();
             this.tra_layer_gb.SuspendLayout();
             this.tra_parameter_gb.SuspendLayout();
@@ -209,7 +215,6 @@ namespace MetroFramework.Demo
             this.batch_pm_gb.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager)).BeginInit();
             this.metroContextMenu1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // FormTabControl
@@ -253,6 +258,7 @@ namespace MetroFramework.Demo
             // 
             // tra_tc
             // 
+            this.tra_tc.Controls.Add(this.tabPage7);
             this.tra_tc.Controls.Add(this.tabPage1);
             this.tra_tc.Controls.Add(this.tabPage2);
             this.tra_tc.Location = new System.Drawing.Point(160, 7);
@@ -260,6 +266,25 @@ namespace MetroFramework.Demo
             this.tra_tc.SelectedIndex = 0;
             this.tra_tc.Size = new System.Drawing.Size(774, 518);
             this.tra_tc.TabIndex = 28;
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.Controls.Add(this.dataGridView1);
+            this.tabPage7.Location = new System.Drawing.Point(4, 22);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Size = new System.Drawing.Size(766, 492);
+            this.tabPage7.TabIndex = 2;
+            this.tabPage7.Text = "数据";
+            this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(17, 19);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 23;
+            this.dataGridView1.Size = new System.Drawing.Size(656, 404);
+            this.dataGridView1.TabIndex = 0;
             // 
             // tabPage1
             // 
@@ -292,14 +317,43 @@ namespace MetroFramework.Demo
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.listBox1);
             this.tabPage2.Controls.Add(this.chart1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(766, 492);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "统计图";
+            this.tabPage2.Text = "统计";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 12;
+            this.listBox1.Items.AddRange(new object[] {
+            "数据处理结果"});
+            this.listBox1.Location = new System.Drawing.Point(70, 367);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(265, 88);
+            this.listBox1.TabIndex = 1;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(15, 15);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(495, 272);
+            this.chart1.TabIndex = 0;
+            this.chart1.Text = "chart1";
             // 
             // tra_Progressbar_gb
             // 
@@ -388,9 +442,9 @@ namespace MetroFramework.Demo
             this.tra_baselayer_cb.AutoSize = true;
             this.tra_baselayer_cb.Location = new System.Drawing.Point(9, 29);
             this.tra_baselayer_cb.Name = "tra_baselayer_cb";
-            this.tra_baselayer_cb.Size = new System.Drawing.Size(48, 17);
+            this.tra_baselayer_cb.Size = new System.Drawing.Size(72, 17);
             this.tra_baselayer_cb.TabIndex = 3;
-            this.tra_baselayer_cb.Text = "底图";
+            this.tra_baselayer_cb.Text = "深圳底图";
             this.tra_baselayer_cb.UseSelectable = true;
             // 
             // tra_userlayer_cb1
@@ -553,7 +607,7 @@ namespace MetroFramework.Demo
             this.stopptTabPage.Padding = new System.Windows.Forms.Padding(25, 23, 25, 23);
             this.stopptTabPage.Size = new System.Drawing.Size(940, 605);
             this.stopptTabPage.TabIndex = 0;
-            this.stopptTabPage.Text = "停留点探测";
+            this.stopptTabPage.Text = "停留探测";
             this.stopptTabPage.VerticalScrollbar = true;
             this.stopptTabPage.VerticalScrollbarBarColor = true;
             this.stopptTabPage.VerticalScrollbarHighlightOnWheel = false;
@@ -1345,7 +1399,7 @@ namespace MetroFramework.Demo
             this.groupBox10.Size = new System.Drawing.Size(777, 506);
             this.groupBox10.TabIndex = 3;
             this.groupBox10.TabStop = false;
-            this.groupBox10.Text = "统计与可视化";
+            this.groupBox10.Text = "统计";
             // 
             // batch_pm_gb
             // 
@@ -1647,22 +1701,6 @@ namespace MetroFramework.Demo
             this.删除该图层ToolStripMenuItem.Text = "删除该图层";
             this.删除该图层ToolStripMenuItem.Click += new System.EventHandler(this.删除该图层ToolStripMenuItem_Click);
             // 
-            // chart1
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(15, 15);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(570, 369);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
-            // 
             // MainForm
             // 
             this.ApplyImageInvert = true;
@@ -1687,8 +1725,11 @@ namespace MetroFramework.Demo
             this.FormTabControl.ResumeLayout(false);
             this.traTabPage.ResumeLayout(false);
             this.tra_tc.ResumeLayout(false);
+            this.tabPage7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.tra_Progressbar_gb.ResumeLayout(false);
             this.tra_Progressbar_gb.PerformLayout();
             this.tra_layer_gb.ResumeLayout(false);
@@ -1728,7 +1769,6 @@ namespace MetroFramework.Demo
             this.batch_pm_gb.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager)).EndInit();
             this.metroContextMenu1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1876,6 +1916,9 @@ namespace MetroFramework.Demo
         private System.Windows.Forms.Button tra_start_bt;
         private System.Windows.Forms.Button stoppt_start_bt;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 

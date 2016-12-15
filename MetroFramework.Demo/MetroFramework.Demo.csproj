@@ -52,45 +52,72 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BruTile, Version=0.7.4.4, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\项目10-8-？\SharpMap\BruTile.dll</HintPath>
+    <Reference Include="BruTile">
+      <HintPath>SharpMap\BruTile.dll</HintPath>
     </Reference>
-    <Reference Include="BruTile.Desktop, Version=0.7.4.4, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\项目10-8-？\SharpMap\BruTile.Desktop.dll</HintPath>
+    <Reference Include="BruTile.Desktop">
+      <HintPath>SharpMap\BruTile.Desktop.dll</HintPath>
     </Reference>
-    <Reference Include="Common.Logging, Version=2.0.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\项目10-8-？\SharpMap\Common.Logging.dll</HintPath>
+    <Reference Include="Common.Logging">
+      <HintPath>SharpMap\Common.Logging.dll</HintPath>
     </Reference>
-    <Reference Include="GeoAPI, Version=1.7.2.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="gdalconst_csharp, Version=1.0.6167.48, Culture=neutral, PublicKeyToken=db5a52b08dc5b321, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\项目10-8-？\SharpMap\GeoAPI.dll</HintPath>
+      <HintPath>GDAL Csharp\gdalconst_csharp.dll</HintPath>
     </Reference>
-    <Reference Include="NetTopologySuite, Version=1.13.2.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="gdal_csharp, Version=1.0.6167.48, Culture=neutral, PublicKeyToken=db5a52b08dc5b321, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\项目10-8-？\SharpMap\NetTopologySuite.dll</HintPath>
+      <HintPath>GDAL Csharp\gdal_csharp.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\项目10-8-？\SharpMap\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="GeoAPI">
+      <HintPath>SharpMap\GeoAPI.dll</HintPath>
     </Reference>
-    <Reference Include="PowerCollections, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\项目10-8-？\SharpMap\PowerCollections.dll</HintPath>
+    <Reference Include="NetTopologySuite">
+      <HintPath>SharpMap\NetTopologySuite.dll</HintPath>
     </Reference>
-    <Reference Include="ProjNet, Version=1.3.0.3, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>SharpMap\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="ogr_csharp, Version=1.0.6167.48, Culture=neutral, PublicKeyToken=db5a52b08dc5b321, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\项目10-8-？\SharpMap\ProjNet.dll</HintPath>
+      <HintPath>GDAL Csharp\ogr_csharp.dll</HintPath>
+    </Reference>
+    <Reference Include="osr_csharp, Version=1.0.6167.47, Culture=neutral, PublicKeyToken=db5a52b08dc5b321, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>GDAL Csharp\osr_csharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PowerCollections">
+      <HintPath>SharpMap\PowerCollections.dll</HintPath>
+    </Reference>
+    <Reference Include="ProjNet">
+      <HintPath>SharpMap\ProjNet.dll</HintPath>
     </Reference>
     <Reference Include="SharpMap, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\项目10-8-？\SharpMap\SharpMap.dll</HintPath>
+      <HintPath>SharpMap\SharpMap.dll</HintPath>
     </Reference>
-    <Reference Include="SharpMap.UI">
-      <HintPath>..\..\项目10-8-？\SharpMap\SharpMap.UI.dll</HintPath>
+    <Reference Include="SharpMap.UI, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>SharpMap\SharpMap.UI.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />

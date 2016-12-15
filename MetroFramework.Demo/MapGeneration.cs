@@ -23,7 +23,7 @@ namespace MetroFramework.Demo
             this.map = map;
             map.Refresh();
             baselayer = new SharpMap.Layers.VectorLayer("States");
-            baselayer.DataSource = new SharpMap.Data.Providers.ShapeFile(@"../../../map/SZ_DISTR/SZ_DISTR.shp", true);
+            baselayer.DataSource = new SharpMap.Data.Providers.ShapeFile(@"../../../../map/SZ_DISTR/SZ_DISTR.shp", true);
             
             //构造土地样式
             VectorStyle style1 = new VectorStyle();

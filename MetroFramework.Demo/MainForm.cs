@@ -406,8 +406,7 @@ namespace MetroFramework.Demo
                 dataGridView1.DataSource = dt;
                 NT.Clear();
                 DataField.Clear();
-                pint();
-                
+              
             }
         }
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -418,7 +417,7 @@ namespace MetroFramework.Demo
         //尝试shp是否成功按钮
         private void button1_Click(object sender, EventArgs e)
         {
-            surface();
+            lines();
         }
 
         //生成点shp的函数
@@ -571,7 +570,6 @@ namespace MetroFramework.Demo
             {
                 MessageBox.Show("DataSource Creation Error");
             }
-
             // 创建图层，创建一个多边形图层，这里没有指定空间参考，如果需要的话，需要在这里进行指定
             Layer oLayer = poDS.CreateLayer("TestPolygon", null, wkbGeometryType.wkbPolygon, null);
             if (oLayer == null)
